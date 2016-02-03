@@ -25,13 +25,13 @@ uses
   Console,
   Framebuffer,
   BCM2836,
+  MMC,             {Include the MMC/SD unit for access to the SD card}
+  BCM2709,         {And the driver for the Raspberry Pi SD host}
   SysUtils,
   HTTP,            {Include the HTTP unit for the server classes}
   Winsock2,        {Include the Winsock2 unit so we can get the IP address}
   FileSystem,      {Include the File system so we have some files to serve up}
   FATFS,           {Plus the FAT file system unit}
-  MMC,             {Include the MMC/SD unit for access to the SD card}
-  BCM2709,         {And the driver for the Raspberry Pi SD host}
   SMSC95XX,        {And the driver for the Raspberry Pi network adapter}
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}

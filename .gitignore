@@ -19,6 +19,8 @@ $RECYCLE.BIN/
 
 # Windows files
 *.exe
+*.bat
+*.cmd
 
 # Free Pascal files
 *.o
@@ -28,5 +30,6 @@ $RECYCLE.BIN/
 *.lps
 *.elf
 *.img
+*.list
 *.compiled
 
