@@ -35,6 +35,7 @@ uses
   Console,
   Framebuffer,
   BCM2835,
+  BCM2708,
   SysUtils,
   GlobalConfig, {Include the global configuration unit for thread default settings}
   Thread1,      {A couple of extra units which are part of this example, not part of Ultibo}

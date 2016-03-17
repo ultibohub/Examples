@@ -26,6 +26,7 @@ uses
   Console,
   Framebuffer,
   BCM2835,
+  BCM2708,
   SysUtils,
   GlobalConfig, {Include the global configuration unit so we can modify some parameters}
   Logging;      {Include the logging unit}

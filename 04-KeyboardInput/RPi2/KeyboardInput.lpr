@@ -27,6 +27,7 @@ uses
   Console,
   Framebuffer,
   BCM2836,
+  BCM2709,
   SysUtils,
   Keyboard, {Keyboard uses USB so that will be included automatically}
   DWCOTG;   {We need to include the USB host driver for the Raspberry Pi}

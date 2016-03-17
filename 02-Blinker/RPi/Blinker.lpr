@@ -23,7 +23,8 @@ uses
   Threads,
   Console,
   Framebuffer,
-  BCM2835;
+  BCM2835,
+  BCM2708;
 
 {Declare some variables as well.}
 var

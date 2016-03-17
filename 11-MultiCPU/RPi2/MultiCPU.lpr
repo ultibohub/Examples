@@ -28,6 +28,7 @@ uses
   Console,
   Framebuffer,
   BCM2836,
+  BCM2709,
   SysUtils;
 
 {A window handle as usual.}

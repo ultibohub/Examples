@@ -27,6 +27,7 @@ uses
   Console,
   Framebuffer,
   BCM2835,
+  BCM2708,
   SysUtils,
   DateUtils,
   Ultibo,   {The Ultibo unit provides some APIs for getting and setting timezones}

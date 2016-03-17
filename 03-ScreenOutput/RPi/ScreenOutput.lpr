@@ -25,6 +25,7 @@ uses
   Console,
   Framebuffer,
   BCM2835,
+  BCM2708,
   SysUtils;
 
 {We'll need a few more variables for this example.}

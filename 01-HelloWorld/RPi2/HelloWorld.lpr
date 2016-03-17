@@ -28,7 +28,8 @@ uses
   Threads,
   Console,
   Framebuffer,
-  BCM2836;
+  BCM2836,
+  BCM2709;
 
 {We also need to declare a variable to hold a console window handle.}
 var

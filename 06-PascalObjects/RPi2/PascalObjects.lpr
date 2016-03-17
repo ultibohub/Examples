@@ -27,6 +27,7 @@ uses
   Console,
   Framebuffer,
   BCM2836,
+  BCM2709,
   SysUtils,
   Classes;  {The main classes unit for the Free Pascal RTL}
 
