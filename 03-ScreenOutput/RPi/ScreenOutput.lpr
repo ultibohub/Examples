@@ -4,7 +4,7 @@ program ScreenOutput;
 
 { Example 03 Screen Output                                                     }
 {                                                                              }
-{  This example builds on the previous ones by demostrating some of the console}
+{  This example builds on the previous ones by demonstrating some of the console}
 {  functions available in Ultibo and how to use them to manipulate text on the }
 {  screen.                                                                     }
 {                                                                              }
@@ -45,7 +45,7 @@ begin
  {To prove that worked let's output some text on the console window}
  ConsoleWindowWriteLn(Handle1,'Welcome to Example 03 Screen Output');
 
- {So that things happen in a timeframe we can see, let's wait about 3 seconds}
+ {So that things happen in a time frame we can see, let's wait about 3 seconds}
  ThreadSleep(3 * 1000);
 
  {Now let's get the current position of the console cursor into a couple of variables}
