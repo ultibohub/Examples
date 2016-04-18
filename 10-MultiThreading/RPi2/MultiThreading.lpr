@@ -77,7 +77,7 @@ begin
  else
   begin
    {Otherwise the thread was created and will start running soon, we have a handle
-    to reference it if we want. The Thread1Execute function is in the Thread1 unit
+    to reference it if we want. The Thread1Execute function is in the Thread1 unit,
     have a look there to see what it is will be doing.}
    ConsoleWindowWriteLn(WindowHandle,'Thread1 was created successfully, the handle is ' + IntToHex(Thread1Handle,8));
 

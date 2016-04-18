@@ -122,7 +122,7 @@ begin
    ConsoleWindowWriteLn(WindowHandle,'');
 
    {You can set the default timezone on start by setting the TIMEZONE_DEFAULT_NAME parameter in cmdline.txt
-    eg TIMEZONE_DEFAULT_NAME=Central_Standard_Time}
+    e.g. TIMEZONE_DEFAULT_NAME=Central_Standard_Time}
    
    {That's it for example 05, try out example 06 next}
   end;

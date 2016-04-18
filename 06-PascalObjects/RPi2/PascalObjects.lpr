@@ -7,7 +7,7 @@ program PascalObjects;
 {  This example demonstrates some of the object pascal classes available in the}
 {  standard run time library.                                                  }
 {                                                                              }
-{  There are a huge variety of classes and you can create yoru own very easily }
+{  There are a huge variety of classes and you can create your own very easily }
 {                                                                              }
 {                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }

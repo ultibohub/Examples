@@ -52,7 +52,7 @@ begin
  ConsoleWindowWriteLn(WindowHandle,'Welcome to Example 08 File Handling');
  ConsoleWindowWriteLn(WindowHandle,'');
 
- {We may need to wait a couple of seconds for any drives to be ready}
+ {We may need to wait a couple of seconds for any drive to be ready}
  ConsoleWindowWriteLn(WindowHandle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
   begin
