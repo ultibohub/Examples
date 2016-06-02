@@ -29,5 +29,9 @@ Example projects included:
    
    12-WebServer        Using the HTTP server component to create a simple web server.
 
+   13-SerialConnection Communicating over a serial (UART) connection to another computer.
+   
+   14-GPIOHandling     Detecting the state of a switch to turn on or off an LED using GPIO functions.
+   
 For more information on these examples see the Ultibo Wiki at https://ultibo.org/wiki/Main_Page
 
