@@ -1,7 +1,6 @@
 Ultibo example projects
 
-These examples are included in the Ultibo core installer download and can be
-found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
+These examples are included in the Ultibo core installer download and can be found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
 
 Example projects included:
 
@@ -33,5 +32,8 @@ Example projects included:
    
    14-GPIOHandling     Detecting the state of a switch to turn on or off an LED using GPIO functions.
    
-For more information on these examples see the Ultibo Wiki at https://ultibo.org/wiki/Main_Page
+   15-MouseCursor      Reading mouse movements and tracking the mouse pointer on screen.
+   
+Under the advanced folder you will find some examples that introduce more advanced features. See the README in that folder for more information.
+   
 

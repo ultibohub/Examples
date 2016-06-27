@@ -24,7 +24,7 @@ begin
   running here and will continue to run until to exits here or calls EndThread.
 
   Most threads will do something in a loop and only exit when they have either
-  completed their task or been signalled by other thread to end.
+  completed their task or been signalled by another thread to end.
 
   For this example we'll use an endless loop but first let's create a console
   window to print some output.}
