@@ -11,4 +11,6 @@ Advanced examples included:
    RAMDisk             How to create, mount and format a RAM disk ready for use. Also covers partitioning and formatting any disk.
    
    UDPServer           Creating a simple SysLog server using the WinsockUDPListener class from Winsock2
+   
+   Sensormatic3000     An imaginary data logging sensor that demonstrates a number of Ultibo features. Created for our presentation to the ADUG 2016 Symposium.
       
