@@ -30,8 +30,8 @@ uses
   Threads,
   Console,
   Framebuffer,
-  BCM2836,
-  BCM2709,
+  BCM2837,
+  BCM2710,
   SysUtils,
   Mouse,       {Mouse uses USB so that will be included automatically}
   DWCOTG,      {We need to include the USB host driver for the Raspberry Pi}
