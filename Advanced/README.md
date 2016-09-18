@@ -14,3 +14,4 @@ Advanced examples included:
    
    Sensormatic3000     An imaginary data logging sensor that demonstrates a number of Ultibo features. Created for our presentation to the ADUG 2016 Symposium.
       
+   DedicatedCPU        How to take control of a CPU in Ultibo core and use it as a high speed micro controller for real time operations.
