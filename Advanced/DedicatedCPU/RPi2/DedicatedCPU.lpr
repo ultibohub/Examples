@@ -37,7 +37,7 @@ uses
   Console,
   HTTP,         {Include HTTP and WebStatus so we can see from a web browser what is happening}
   WebStatus,
-  ThreadUnit,   {Include our thread unit which contains most of the example}
+  ThreadUnit;   {Include our thread unit which contains most of the example}
 
   
 var

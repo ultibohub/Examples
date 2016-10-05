@@ -306,7 +306,7 @@ begin
    if Last <> Counter then
     begin
      {Print the counter value on the right window}
-     ConsoleWindowWriteLn(RightWindow,'Counter value is ' + IntToStr(Counter));
+     ConsoleWindowWriteLn(RightWindow,'Counter value is ' + IntToStr(Counter) + ', Difference is ' + IntToStr(Counter - Last));
     end;
    Last:=Counter; 
    
@@ -427,6 +427,33 @@ begin
     line and see how many loop iterations happen per second with no other code}
    //Inc(Counter);
   end;
+  
+ {If you really want to see just how fast a single CPU can go, try commenting out the loop above
+  so that the dedicated thread executes this small piece of inline assembler instead. This loop 
+  only contains 3 ARM instructions so it isn't very real world but it does increment and store
+  the value of the counter as many times as it possibly can per second}
+ {$IFDEF CPUARM}  
+ asm
+  //Register usage
+  //r0 = Counter address
+  //r1 = Counter value
+  
+  //Load the counter address and value
+  ldr r0, .LCounter
+  ldr r1, [r0]
+  
+  .LLoop:
+  //Increment and store the counter
+  add r1, r1, #1
+  str r1, [r0]
+  
+  //Repeat the loop
+  b .LLoop
+  
+  .LCounter:
+  .long	Counter
+ end;
+ {$ENDIF CPUARM}   
 end;
 
 
