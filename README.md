@@ -34,6 +34,10 @@ Example projects included:
    
    15-MouseCursor      Reading mouse movements and tracking the mouse pointer on screen.
    
+   16-BouncingBoxes    Graphics aninmation using the double bufferring technique.
+   
+   17-TextEditor       A simple text editor using the FreeVision package from Free Pascal.
+   
 Under the advanced folder you will find some examples that introduce more advanced features. See the README in that folder for more information.
    
 
