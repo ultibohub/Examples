@@ -32,6 +32,7 @@ uses
   GlobalConfig,
   Logging,
   Filesystem,
+  RaspberryPi3,
   FATFS,
   MMC,
   HTTP,
