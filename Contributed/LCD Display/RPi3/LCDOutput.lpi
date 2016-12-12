@@ -36,8 +36,8 @@
         <Filename Value="LCDOutput.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="131"/>
-        <CursorPos X="15" Y="142"/>
+        <TopLine Value="56"/>
+        <CursorPos Y="65"/>
         <UsageCount Value="89"/>
         <Loaded Value="True"/>
       </Unit0>

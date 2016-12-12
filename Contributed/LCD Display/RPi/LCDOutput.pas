@@ -62,7 +62,6 @@ begin
  LoggingDeviceSetDefault(LoggingDeviceFindByType(LOGGING_TYPE_FILE));
 
  PiTFT32Init();
- ThreadSleep(3000);
 
  LoggingOutput('TFT driver initialized');
 
