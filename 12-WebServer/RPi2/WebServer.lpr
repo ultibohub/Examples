@@ -35,7 +35,7 @@ uses
   SMSC95XX,        {And the driver for the Raspberry Pi network adapter}
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}
-  ShellFileSystem, {Plus the File system shell commands}
+  ShellFilesystem, {Plus the File system shell commands}
   RemoteShell;     {And the RemoteShell unit so we can Telnet to our Pi}
 
 {A window handle and some others.}
