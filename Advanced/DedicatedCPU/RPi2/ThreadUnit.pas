@@ -287,6 +287,7 @@ begin
  
  
  {Send a message to our dedicated CPU thread to tell it we are done and it can go ahead}
+ FillChar(Message,SizeOf(TMessage),0);
  ThreadSendMessage(DedicatedThread,Message);
  ConsoleWindowWriteLn(Handle,'Sent a message to the dedicated CPU thread');
  
