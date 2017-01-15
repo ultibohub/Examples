@@ -28,7 +28,7 @@ var
  WindowHandle:TWindowHandle;
 begin
  {This is the thread function for our TThread2Object. When Thread2 is created it
-  will start running here and will continue to run until to exits here.
+  will start running here and will continue to run until it exits here.
 
   Like our other thread we'll use an endless loop and create a console window
   to print some output.}

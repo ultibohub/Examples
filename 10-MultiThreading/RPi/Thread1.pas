@@ -21,7 +21,7 @@ begin
  Thread1Execute:=0;
 
  {This is the thread function for Thread1, when Thread1 is created it will start
-  running here and will continue to run until to exits here or calls EndThread.
+  running here and will continue to run until it exits here or calls EndThread.
 
   Most threads will do something in a loop and only exit when they have either
   completed their task or been signalled by another thread to end.
