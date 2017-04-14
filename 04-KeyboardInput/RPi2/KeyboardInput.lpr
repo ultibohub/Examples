@@ -55,10 +55,17 @@ begin
     What happens if no keyboard is connected?
 
     Ultibo has dynamic USB attach and detach so just plug one in and start typing}
-   if ConsoleReadChar(Character,nil) then
+   if ConsoleGetKey(Character,nil) then
     begin
      {Before we print the character to the screen, check what was pressed}
-     if Character = #13 then
+     if Character = #0 then
+      begin
+       {If a control character like a function key or one of the arrow keys was pressed then
+        ConsoleGetKey will return 0 first to let us know, we need to read the next character
+        to get the key that was pressed}
+       ConsoleGetKey(Character,nil);
+      end
+     else if Character = #13 then
       begin
        {If the enter key was pressed, write a new line to the console instead of a
         character}
@@ -71,7 +78,7 @@ begin
       end;
     end;
 
-   {No need to sleep on each loop, ConsoleReadChar will wait until a key is pressed}
+   {No need to sleep on each loop, ConsoleGetKey will wait until a key is pressed}
   end;
 
  {No need to halt, we never reach this point}
