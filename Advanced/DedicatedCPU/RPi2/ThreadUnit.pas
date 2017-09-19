@@ -393,6 +393,17 @@ begin
  DisableFIQ;
  DisableIRQ;
 
+ {Of course you can reenable interrupts when you need to do something like allocate some memory
+  or read or write to a file. There are a number of choices available, the simplest is just to
+  call EnableFIQ and EnableIRQ which will undo the disable from above.
+  
+  Ultibo also has a several pairs of functions that allow you to recursively disable and enable
+  interrupts without having to count how many times you disabled and then reenable using the same
+  number of calls. The SaveIRQFIQ function disables both IRQ and FIQ and then returns a mask to
+  indicate the previous state, when you want to enable again you just pass the mask back to the
+  RestoreIRQFIQ function which will only actually reenable if interrupts were previously enabled.
+  
+  Got that, maybe not but it will make more sense when you need to use it!}
  
  {Go back to looping and counting, the main thread is still watching so it will continue printing
   the counter values while we do this as well}

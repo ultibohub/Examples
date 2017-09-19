@@ -51,7 +51,7 @@
     </SearchPaths>
     <CodeGeneration>
       <SmartLinkUnit Value="True"/>
-      <TargetProcessor Value="armv7a"/>
+      <TargetProcessor Value="ARMV7A"/>
       <TargetController Value="QEMUVPB"/>
       <TargetCPU Value="arm"/>
       <TargetOS Value="ultibo"/>
