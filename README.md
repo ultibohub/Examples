@@ -38,4 +38,6 @@ These examples are included in the Ultibo core installer download and can be fou
 
 * 17-TextEditor - A simple text editor using the FreeVision package from Free Pascal.
    
+* 18-PWMControl - Demonstrating how to change the brightness of an LED using the PWM devices.
+   
 Under the advanced folder you will find some examples that introduce more advanced features. See the README in that folder for more information.
