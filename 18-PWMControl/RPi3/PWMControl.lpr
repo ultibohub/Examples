@@ -116,7 +116,7 @@ begin
    PWMDeviceSetRange(PWM0Device,1024);
    {And the mode to PWM_MODE_MARKSPACE}
    PWMDeviceSetMode(PWM0Device,PWM_MODE_MARKSPACE);
-   {Finally set the frequency to 960MHz}
+   {Finally set the frequency to 9.6MHz}
    PWMDeviceSetFrequency(PWM0Device,9600000);
    
    {Setup PWM device 1}
