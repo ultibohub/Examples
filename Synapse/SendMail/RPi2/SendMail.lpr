@@ -62,7 +62,7 @@ begin
  
  {Send the email}
  {If you receive "Login failed" messages it may be because your ISP blocks outbound 
-  connections to port 25, this ia common industry practive to prevent spam. You may
+  connections to port 25, this is a common industry practive to prevent spam. You may
   need to set the EmailHost variable in the MailSend unit to the mail host of your ISP}
  if SendEmail(ToAddress,FromAddress) then
   begin
