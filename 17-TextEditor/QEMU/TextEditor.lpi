@@ -46,7 +46,7 @@
       <Filename Value="TextEditor"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir);$(LazarusDir)fpc\$(FPCVer)\source\packages\fv\src"/>
+      <IncludeFiles Value="$(ProjOutDir);$(LazarusDir)fpc\$(FPCVer)\source\packages\fv\src;$(LazarusDir)fpc\source\packages\fv\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>
