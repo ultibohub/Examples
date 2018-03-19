@@ -12,22 +12,20 @@ program MouseCursor;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B version                                                     }
+{  QEMU VersatilePB version                                                    }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}
 uses
+  QEMUVersatilePB,
   GlobalConst,
   GlobalTypes,
   Platform,
   Threads,
   Console,
   Framebuffer,
-  BCM2837,
-  BCM2710,
   SysUtils,
-  Mouse,       {Mouse uses USB so that will be included automatically}
-  DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
+  Mouse;       {Mouse uses USB so that will be included automatically}
 
 {We'll need two window handles and some mouse tracking variables.}
 var
@@ -55,7 +53,7 @@ begin
 
   {Output some welcome text on the left console window}
   ConsoleWindowWriteLn(Handle1,'Welcome to Example 15 Mouse Cursor');
-  ConsoleWindowWriteLn(Handle1,'Make sure you have a USB mouse connected, try moving it and clicking the buttons to see what happens');
+  ConsoleWindowWriteLn(Handle1,'Click in the QEMU window to capture the mouse, then try moving it and clicking the buttons to see what happens');
 
   {Let's setup the mouse cursor so we can move it around the screen. The Raspberry Pi
    has cursor support built in to the graphics processor (GPU) so we can use that to
@@ -163,3 +161,4 @@ begin
 
   {No need to halt, since we never exit the loop}
 end.
+

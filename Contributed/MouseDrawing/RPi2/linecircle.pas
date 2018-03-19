@@ -48,13 +48,13 @@ begin
   case BoardGetType of
    BOARD_TYPE_RPIA,BOARD_TYPE_RPIB,
    BOARD_TYPE_RPIA_PLUS,BOARD_TYPE_RPIB_PLUS,
-   BOARD_TYPE_RPI_ZERO:begin
-     {We have an A/B/A+/B+ or Zero}
+   BOARD_TYPE_RPI_ZERO,BOARD_TYPE_RPI_ZERO_W:begin
+     {We have an A/B/A+/B+/Zero or ZeroW}
      {Allocate some Shared memory for our cursor}
      Cursor:=AllocSharedMem(Size);
     end;
-   BOARD_TYPE_RPI2B,BOARD_TYPE_RPI3B:begin
-     {We have a 2B or 3B}
+   BOARD_TYPE_RPI2B,BOARD_TYPE_RPI3B,BOARD_TYPE_RPI3B_PLUS:begin
+     {We have a 2B/3B or 3B+}
      {Allocate some No Cache memory instead}
      Cursor:=AllocNoCacheMem(Size);
     end;
