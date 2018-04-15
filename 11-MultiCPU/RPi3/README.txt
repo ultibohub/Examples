@@ -4,4 +4,4 @@ Following on from the previous example on multi threading, this one shows the mu
 
 Multi CPU support is built in like multi threading, you don't need to enable anything it is just there.
 
-Raspberry Pi 3B version
+Raspberry Pi 3B/3B+ version

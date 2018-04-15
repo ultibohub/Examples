@@ -13,7 +13,7 @@ program WebServer;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B version                                                     }
+{  Raspberry Pi 3B/3B+ version                                                 }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}
@@ -32,7 +32,8 @@ uses
   Winsock2,        {Include the Winsock2 unit so we can get the IP address}
   FileSystem,      {Include the File system so we have some files to serve up}
   FATFS,           {Plus the FAT file system unit}
-  SMSC95XX,        {And the driver for the Raspberry Pi network adapter}
+  SMSC95XX,        {And the drivers for the Raspberry Pi network adapter}
+  LAN78XX,
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}

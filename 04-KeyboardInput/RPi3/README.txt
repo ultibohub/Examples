@@ -4,4 +4,4 @@ If you've been following in order, the last example showed how to print text on 
 
 It also begins to use the USB functionality of the Raspberry Pi, the primary way for it to interact with the world.
 
-Raspberry Pi 3B version
+Raspberry Pi 3B/3B+ version

@@ -16,7 +16,7 @@ program MultiCPU;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B version                                                     }
+{  Raspberry Pi 3B/3B+ version                                                 }
 {   There is, of course, no Raspberry Pi A/B/A+/B+ or Zero version.            }
 
 {Declare some units used by this example.}

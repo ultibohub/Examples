@@ -33,7 +33,8 @@ uses
   Ultibo,   {The Ultibo unit provides some APIs for getting and setting timezones}
   Services, {The services unit includes the NTP client and will automatically include the network}
   DWCOTG,   {We need to include the USB host driver for the Raspberry Pi}
-  SMSC95XX; {We also need to include the driver for the Raspberry Pi network adapter}
+  SMSC95XX, {We also need to include the drivers for the Raspberry Pi network adapter}
+  LAN78XX;
 
 {A window handle so we can see what is happening.}
 var

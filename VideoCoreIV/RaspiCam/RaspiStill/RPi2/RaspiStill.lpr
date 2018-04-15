@@ -21,7 +21,7 @@ program RaspiStill;
 { start_x=1                                                                    }
 { gpu_mem=128                                                                  }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B.              }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+.          }
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}

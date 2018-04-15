@@ -15,7 +15,7 @@ program SerialConnection;
 { Raspberry Pi Model A and B (26 pin header)                                   }
 {   https://www.raspberrypi.org/documentation/usage/gpio/                      }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B (40 pin header)                         }
+{ Raspberry Pi Models A+/B+/Zero/2B/3B/3B+ (40 pin header)                     }
 {   https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/      }
 {                                                                              }
 { You will also need a terminal program running on your computer, you can use  }
@@ -33,7 +33,7 @@ program SerialConnection;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B version                                                     }
+{  Raspberry Pi 3B/3B+ version                                                 }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}
