@@ -41,6 +41,9 @@ var
  CursorX:LongInt;
  CursorY:LongInt;
 
+ ScalingX:Double;
+ ScalingY:Double;
+ 
  ScreenWidth:LongWord;
  ScreenHeight:LongWord;
 
@@ -143,11 +146,36 @@ begin
       ConsoleWindowWriteLn(Handle2,'Mouse OffsetX = ' + IntToStr(MouseData.OffsetX) + ' OffsetY = ' + IntToStr(MouseData.OffsetY) + ' Buttons = ' + Buttons);
 
       {Now update our mouse tracking for cursor X and Y}
-      CursorX:=CursorX + MouseData.OffsetX;
+      {Check if the X value is absolute instead of relative}
+      if (MouseData.Buttons and MOUSE_ABSOLUTE_X) = MOUSE_ABSOLUTE_X then
+       begin
+        {For absolute values the maximum X field allows us to scale
+         the cursor X value relative to the size of our screen}
+        ScalingX:=MouseData.MaximumX / ScreenWidth;
+        if ScalingX <= 0 then ScalingX:=1.0;
+        
+        CursorX:=Trunc(MouseData.OffsetX / ScalingX);
+       end
+      else
+       begin
+        CursorX:=CursorX + MouseData.OffsetX;
+       end; 
       if CursorX < 0 then CursorX:=0;
       if CursorX > (ScreenWidth - 1) then CursorX:=ScreenWidth - 1;
 
-      CursorY:=CursorY + MouseData.OffsetY;
+      {Check if the Y value is absolute}
+      if (MouseData.Buttons and MOUSE_ABSOLUTE_Y) = MOUSE_ABSOLUTE_Y then
+       begin
+        {Use maximum Y to scale the Y value to the screen}
+        ScalingY:=MouseData.MaximumY / ScreenHeight;
+        if ScalingY <= 0 then ScalingY:=1.0;
+        
+        CursorY:=Trunc(MouseData.OffsetY / ScalingY);
+       end
+      else
+       begin
+        CursorY:=CursorY + MouseData.OffsetY;
+       end;
       if CursorY < 0 then CursorY:=0;
       if CursorY > (ScreenHeight - 1) then CursorY:=ScreenHeight - 1;
 
