@@ -54,7 +54,7 @@ var
  CurrentValue:LongWord;
  WindowHandle:TWindowHandle;
 
-{We also add another function, see below for what is does}
+{We also add another function, see below for what it does}
 procedure GPIOPinEvent(Data:Pointer;Pin,Trigger:LongWord);
 begin
  {Print a message to show what the event was. You might notice that sometimes
