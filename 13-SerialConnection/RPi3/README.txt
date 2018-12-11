@@ -10,10 +10,10 @@ Raspberry Pi Model A and B
 
 https://www.raspberrypi.org/documentation/usage/gpio/
  
-Raspberry Pi Models A+/A+/Zero/2B/3B/3B+
+Raspberry Pi Models A+/A+/Zero/2B/3B/3B+/3A+
 
 https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/
 
 You will also need a terminal program like PuTTY on your computer to open the appropriate COM port and type some characters.
 
-Raspberry Pi 3B/3B+ version
+Raspberry Pi 3B/3B+/3A+ version

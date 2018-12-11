@@ -6,5 +6,5 @@ This example shows the use of a range of features and techniques including threa
 
 Originally created for our presentation to the Australian Delphi User Group (ADUG) 2016 Symposium held in Sydney and Melbourne.
 
-Raspberry Pi 2B/3B/3B+ version, copy the code to a new project to create a version for A/B/A+/B+/Zero.
+Raspberry Pi 2B/3B/3B+/3A+ version, copy the code to a new project to create a version for A/B/A+/B+/Zero.
 

@@ -14,7 +14,7 @@ program HelloTriangle;
 { Make sure you also copy the Djenne_128_128.raw, Gaudi_128_128.raw and        }
 { Lucca_128_128.raw files from the Media folder.                               }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+.          }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}

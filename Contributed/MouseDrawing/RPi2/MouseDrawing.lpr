@@ -10,7 +10,7 @@ program MouseDrawing;
 { Contributed by Mgreim 03.JUL.2016                                            }
 { Original source: https://github.com/MGreim/ultibomousegraphicdemo            }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+.          }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
 { To create a version for the A/B/A+/B+/Zero simply create a new project and   }
 { copy this code into it.                                                      }
 

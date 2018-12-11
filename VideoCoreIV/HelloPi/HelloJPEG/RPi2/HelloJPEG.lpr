@@ -17,7 +17,7 @@ program HelloJPEG;
 { Remember that this example only demonstrates decoding a JPEG in hardware and }
 { will not display the picture on screen.                                      }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+.          }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}

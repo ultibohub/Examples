@@ -4,4 +4,4 @@ Playing a small piece of h264 video using the OpenMAX IL libraries.
 
 This example directly imports the C code from the original hello_pi collection.
 
-Raspberry Pi 2B/3B/3B+ version
+Raspberry Pi 2B/3B/3B+/3A+ version

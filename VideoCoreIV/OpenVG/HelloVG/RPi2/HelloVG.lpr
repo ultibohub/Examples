@@ -12,7 +12,7 @@ program HelloVG;
 { Once compiled copy the kernel7.img file to an SD card along with the         }
 { firmware files and use it to boot your Raspberry Pi.                         }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+.          }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
 { To create a version for the A/B/A+/B+/Zero simply create a new project and   }
 { copy this code into it.                                                      }
 

@@ -8,4 +8,4 @@ Note: You must include the following setting in a config.txt file in the root di
 
 gpu_mem=128
 
-Raspberry Pi 2B/3B/3B+ version
+Raspberry Pi 2B/3B/3B+/3A+ version

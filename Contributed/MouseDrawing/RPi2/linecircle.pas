@@ -53,8 +53,9 @@ begin
      {Allocate some Shared memory for our cursor}
      Cursor:=AllocSharedMem(Size);
     end;
-   BOARD_TYPE_RPI2B,BOARD_TYPE_RPI3B,BOARD_TYPE_RPI3B_PLUS:begin
-     {We have a 2B/3B or 3B+}
+   BOARD_TYPE_RPI2B,BOARD_TYPE_RPI3B,BOARD_TYPE_RPI3B_PLUS,
+   BOARD_TYPE_RPI3A_PLUS:begin
+     {We have a 2B/3B/3B+ or 3A+}
      {Allocate some No Cache memory instead}
      Cursor:=AllocNoCacheMem(Size);
     end;
