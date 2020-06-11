@@ -8,15 +8,15 @@ program SerialConnection;
 { to another computer and echo back any line of text it receives.              }
 {                                                                              }
 { You will need a serial cable or a USB to serial converter to connect the Pi  }
-{ to your computer, the Pi uses pin 14 (Transmit) and pin 15 (Receive) as well }
-{ as a Ground pin to make the connection. The documentation shows you where to }
-{ find each of the pins on the Raspberry Pi.                                   }
+{ to your computer, the Pi uses GPIO 14 (Transmit) and 15 (Receive) as well as }
+{ a Ground pin to make the connection. The documentation below shows you where }
+{ to find each of the GPIO connections on the physical pins of your Pi.        }
 {                                                                              }
-{ Raspberry Pi Model A and B (26 pin header)                                   }
+{ Raspberry Pi Models A+/B+/Zero/2B/3B (40 pin header)                         }
 {   https://www.raspberrypi.org/documentation/usage/gpio/                      }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B/3B+/3A+ (40 pin header)                 }
-{   https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/      }
+{ Raspberry Pi Pinout (26 and 40 pin header)                                   }
+{   https://pinout.xyz/                                                        }
 {                                                                              }
 { You will also need a terminal program running on your computer, you can use  }
 { something like PuTTY to create a serial connection to the COM port you are   }
