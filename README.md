@@ -39,5 +39,9 @@ These examples are included in the Ultibo core installer download and can be fou
 * 17-TextEditor - A simple text editor using the FreeVision package from Free Pascal.
    
 * 18-PWMControl - Demonstrating how to change the brightness of an LED using the PWM devices.
+
+* 19-SenseHAT - Reading the joystick and displaying text on the 8x8 LED matrix of the Raspberry Pi SenseHAT.
+
+* 20-PWMSound - Demonstrating how to play audio using the PWM devices and DMA.
    
 Under the advanced folder you will find some examples that introduce more advanced features. See the README in that folder for more information.
