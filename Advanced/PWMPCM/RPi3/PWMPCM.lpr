@@ -12,7 +12,7 @@ program PWMPCM;
 { samples directly to the PWM FIFO buffer using the CPU.                       }
 {                                                                              }
 { This is intended to reproduce similar examples that are available for other  }
-{ such as the PIC Sound Player project at Enide!                               }
+{ devices such as the PIC Sound Player project at Enide!                       }
 {  See: http://www.enide.net/webcms/index.php?page=pcm2pwm                     }
 {                                                                              }
 { The example also shows a technique for extending the functionality of an     }
@@ -520,7 +520,7 @@ begin
   
   For this example we only need PWM0, you can setup both channels to play
   stereo audio and the decoding function above includes 2 channel support
-  but we'll leave that as an exercise for your to experiment with}
+  but we'll leave that as an exercise for you to experiment with}
  PWM0Device:=PWMDeviceFindByName('PWM0');
  if PWM0Device <> nil then
   begin
