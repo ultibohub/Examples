@@ -6,6 +6,8 @@ The primary purpose of these examples is to prove that all functions of the Vide
 
 These examples are included in the Ultibo core installer download and can be found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
 
+Note that some of these examples don't work on the Raspberry Pi 4B/400 as it uses a different GPU that is not compatible with the current libraries.
+
 ### HelloPi examples:
 
 * HelloAudio - A very simple example showing audio output over HDMI.

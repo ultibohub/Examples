@@ -23,8 +23,8 @@ program PWMSound;
 {                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }
 {                                                                              }
-{  Once compiled copy the kernel.img file to an SD card along with the firmware}
-{  files and use it to boot your Raspberry Pi.                                 }
+{  Once compiled copy the kernel7.img file to an SD card along with the        }
+{  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
 {  Make sure you also copy the a2002011001-e02.pcm from the folder above which }
 {  contains the audio sample to be played.                                     }

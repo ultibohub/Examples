@@ -9,8 +9,8 @@ program MouseCursor;
 {                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }
 {                                                                              }
-{  Once compiled copy the kernel7.img file to an SD card along with the        }
-{  firmware files and use it to boot your Raspberry Pi.                        }
+{  Once compiled select Tools, Run in QEMU ... from the Lazarus menu to launch }
+{  the application in a QEMU session.                                          }
 {                                                                              }
 {  QEMU VersatilePB version                                                    }
 {   What's the difference? See Project, Project Options, Config and Target.    }

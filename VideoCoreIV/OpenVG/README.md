@@ -6,6 +6,8 @@ The examples in this folder demonstrate some of the functionality of the VGShape
 
 These examples are included in the Ultibo core installer download and can be found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
 
+Note that these examples don't work on the Raspberry Pi 4B/400 as it uses a different GPU that is not compatible with the current libraries.
+
 ### OpenVG examples:
 
 * HelloVG - A simple introduction to the world of OpenVG, kind of Hello World for 2D graphics.

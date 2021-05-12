@@ -9,8 +9,8 @@ program HelloTeapot;
 {                                                                              }
 { To compile the example select Run, Compile (or Run, Build) from the menu.    }
 {                                                                              }
-{ Once compiled copy the kernel7.img file to an SD card along with the         }
-{ firmware files and use it to boot your Raspberry Pi.                         }
+{ Once compiled copy the kernel.img file to an SD card along with the firmware }
+{ files and use it to boot your Raspberry Pi.                                  }
 {                                                                              }
 { Make sure you also copy the teapot.obj.dat and test.h264 files from the Media}
 { folder.                                                                      }

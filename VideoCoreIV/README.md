@@ -6,6 +6,8 @@ The examples include some from the collection that are supplied with Raspbian (t
 
 These examples are included in the Ultibo core installer download and can be found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
 
+Note that some of these examples don't work on the Raspberry Pi 4B/400 as it uses a different GPU that is not compatible with the current libraries.
+
 ### VideoCore IV examples:
 
 * HelloPi - A number of examples from the hello_pi collection that have been ported to run under Ultibo.

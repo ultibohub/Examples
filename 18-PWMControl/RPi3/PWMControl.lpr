@@ -27,11 +27,11 @@ program PWMControl;
 {                                                                              }
 { The documentation below shows you where to find each of the pins.            }
 {                                                                              }
-{ Raspberry Pi Model A and B (26 pin header)                                   }
+{ Raspberry Pi Models A+/B+/Zero/2B/3B/4B/400 (40 pin header)                  }
 {   https://www.raspberrypi.org/documentation/usage/gpio/                      }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B/3B+/3A+ (40 pin header)                 }
-{   https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/      }
+{ Raspberry Pi Pinout (26 and 40 pin header)                                   }
+{   https://pinout.xyz/                                                        }
 {                                                                              }
 { We've also included a diagram that shows the connections, look at the file   }
 { PWM Example.png in the same folder as this example.                          }

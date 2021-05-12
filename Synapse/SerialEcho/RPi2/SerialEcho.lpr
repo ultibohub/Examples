@@ -11,7 +11,7 @@ program SerialEcho;
 { a Ground pin to make the connection. The documentation below shows you where }
 { to find each of the GPIO connections on the physical pins of your Pi.        }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B (40 pin header)                         }
+{ Raspberry Pi Models A+/B+/Zero/2B/3B/4B/400 (40 pin header)                  }
 {   https://www.raspberrypi.org/documentation/usage/gpio/                      }
 {                                                                              }
 { Raspberry Pi Pinout (26 and 40 pin header)                                   }
@@ -33,6 +33,8 @@ program SerialEcho;
 { firmware files and use it to boot your Raspberry Pi.                         }
 {                                                                              }
 { This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ To create a version for the A/B/A+/B+/Zero or for the 4B/400 simply create a }
+{ new project, copy this code into it and modify as required.                  }
 {                                                                              }
 { This example was adapted for Ultibo from the Synapse modem example.          }
 {                                                                              }

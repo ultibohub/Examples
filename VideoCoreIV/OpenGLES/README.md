@@ -4,6 +4,8 @@ This folder contains a pair of OpenGL ES examples written purely in Free Pascal 
 
 These examples are included in the Ultibo core installer download and can be found from the Lazarus IDE by selecting Tools, Example Projects.. from the menu.
 
+Note that these examples don't work on the Raspberry Pi 4B/400 as it uses a different GPU that is not compatible with the current libraries.
+
 ### OpenGL ES examples:
 
 * HelloGLES - A direct port to Free Pascal of the hello triangle OpenGL ES 1.1 example, except this one allows you to supply your own bitmap.

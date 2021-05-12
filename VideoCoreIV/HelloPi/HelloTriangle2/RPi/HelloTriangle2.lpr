@@ -8,8 +8,8 @@ program HelloTriangle2;
 {                                                                              }
 { To compile the example select Run, Compile (or Run, Build) from the menu.    }
 {                                                                              }
-{ Once compiled copy the kernel7.img file to an SD card along with the         }
-{ firmware files and use it to boot your Raspberry Pi.                         }
+{ Once compiled copy the kernel.img file to an SD card along with the firmware }
+{ files and use it to boot your Raspberry Pi.                                  }
 {                                                                              }
 { To see the full effect of this example you should connect a USB mouse to     }
 { your Raspberry Pi, move the mouse to redraw the Mandelbrot.                  }
