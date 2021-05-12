@@ -490,10 +490,14 @@ begin
   for playing sound will normally end up with the names PWM2 and PWM3 when
   the driver is included in an application.
 
-  You could also use PWMDeviceFindByDescription() here and use the contant defined
-  in the BCM2711 unit for BCM2711_PWM1_DESCRIPTION by appending the channel number
-  to the description, for example BCM2711_PWM1_DESCRIPTION + '_0' for the first
-  channel.}
+  You could also use PWMDeviceFindByDescription() here and use the value returned
+  by calling BCM2711GetPWMDescription and passing the Id and Channel parameters
+  like this 
+  
+   PWMDeviceFindByDescription(BCM2711GetPWMDescription(1,0));
+   PWMDeviceFindByDescription(BCM2711GetPWMDescription(1,1));
+  
+  which would be accurate even if the numbering of the devices in Ultibo changed.}
 
  PWM0Device:=PWMDeviceFindByName('PWM2');
  PWM1Device:=PWMDeviceFindByName('PWM3');
