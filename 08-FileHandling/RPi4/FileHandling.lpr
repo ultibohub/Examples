@@ -26,6 +26,7 @@ uses
   Threads,
   Console,
   Framebuffer,
+  RPiGPIOExpander,
   BCM2838,
   SysUtils,
   Classes,     {Include the common classes}
