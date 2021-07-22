@@ -491,11 +491,10 @@ begin
   the driver is included in an application.
 
   You could also use PWMDeviceFindByDescription() here and use the value returned
-  by calling BCM2711GetPWMDescription and passing the Id and Channel parameters
-  like this 
+  by calling PWMGetDescription and passing the Id and Channel parameters like this 
   
-   PWMDeviceFindByDescription(BCM2711GetPWMDescription(1,0));
-   PWMDeviceFindByDescription(BCM2711GetPWMDescription(1,1));
+   PWMDeviceFindByDescription(PWMGetDescription(1,0));
+   PWMDeviceFindByDescription(PWMGetDescription(1,1));
   
   which would be accurate even if the numbering of the devices in Ultibo changed.}
 
