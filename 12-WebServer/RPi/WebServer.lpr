@@ -32,7 +32,8 @@ uses
   Winsock2,        {Include the Winsock2 unit so we can get the IP address}
   FileSystem,      {Include the File system so we have some files to serve up}
   FATFS,           {Plus the FAT file system unit}
-  SMSC95XX,        {And the driver for the Raspberry Pi network adapter}
+  SMSC95XX,        {And the drivers for the Raspberry Pi network adapter}
+  USBCDCEthernet,
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}

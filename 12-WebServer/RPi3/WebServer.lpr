@@ -34,6 +34,7 @@ uses
   FATFS,           {Plus the FAT file system unit}
   SMSC95XX,        {And the drivers for the Raspberry Pi network adapter}
   LAN78XX,
+  USBCDCEthernet,
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}
