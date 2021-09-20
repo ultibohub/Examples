@@ -1065,8 +1065,8 @@ PROCEDURE loadcursor( filename : string);
         writeln('Waiting for drive C:\');
         while not DirectoryExists('C:\') do
          begin
-          {Sleep for a second}
-          Sleep(1000);
+          {Sleep for a moment}
+          Sleep(100);
          end;
         writeln('C:\ drive is ready');
 

@@ -191,7 +191,7 @@ type
   {EGL config}
   Alpha:VC_DISPMANX_ALPHA_T;
   NativeWindow:EGL_DISPMANX_WINDOW_T;
-  ConfigAttributes:array[0..10] of EGLint;
+  ConfigAttributes:array[0..12] of EGLint;
   ContextAttributes:array[0..2] of EGLint;
  end;
  
@@ -354,7 +354,7 @@ begin
  State.Context:=EGL_NO_CONTEXT;
  
  {Setup the alpha channel state}
- State.Alpha.flags:=DISPMANX_FLAGS_ALPHA_FIXED_ALL_PIXELS;
+ State.Alpha.flags:=DISPMANX_FLAGS_ALPHA_FROM_SOURCE;
  State.Alpha.opacity:=255;
  State.Alpha.mask:=0;
  
@@ -369,7 +369,9 @@ begin
  State.ConfigAttributes[7]:=8;
  State.ConfigAttributes[8]:=EGL_RED_SIZE;
  State.ConfigAttributes[9]:=8;
- State.ConfigAttributes[10]:=EGL_NONE;
+ State.ConfigAttributes[10]:=EGL_ALPHA_SIZE;
+ State.ConfigAttributes[11]:=8;
+ State.ConfigAttributes[12]:=EGL_NONE;
  
  {Setup the EGL context attributes}
  State.ContextAttributes[0]:=EGL_CONTEXT_CLIENT_VERSION;
@@ -486,7 +488,7 @@ begin
  {Clear depth, color, background and enable back face culling} 
  glClearDepthf(1.0);
  
- glClearColor(0.0,0.0,0.0,1.0);
+ glClearColor(0.0,0.0,0.0,0.50);
  
  glEnable(GL_CULL_FACE);
  

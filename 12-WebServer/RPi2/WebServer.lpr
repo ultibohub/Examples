@@ -75,7 +75,7 @@ begin
    while (IPAddress = '') or (IPAddress = '0.0.0.0') or (IPAddress = '255.255.255.255') do
     begin
      {Sleep a bit}
-     Sleep(1000);
+     Sleep(100);
 
      {Get the address again}
      IPAddress:=Winsock2TCPClient.LocalAddress;
@@ -85,6 +85,19 @@ begin
  {Print our IP address on the screen}
  ConsoleWindowWriteLn(WindowHandle,'IP address is ' + IPAddress);
  ConsoleWindowWriteLn(WindowHandle,'');
+
+ {We may need to wait a couple of seconds for drives to be ready}
+ if not DirectoryExists('C:\') then
+  begin
+   ConsoleWindowWriteLn(WindowHandle,'Waiting for drive C:\');
+   
+   {Wait for C:\ drive}
+   while not DirectoryExists('C:\') do
+    begin
+     {Sleep for a moment}
+     Sleep(100);
+    end;
+  end;
 
  {Let's create a www folder on C:\ for our web server}
  if DirectoryExists('C:\') and not(DirectoryExists('C:\www')) then

@@ -444,7 +444,7 @@ begin
  
  {If we already have a console window and want the FreeVision app to appear on it then
   we can just assign the Handle to the CONSOLE_VIDEO_WINDOW variable}
- //CONSOLE_VIDEO_WINDOW
+ //CONSOLE_VIDEO_WINDOW:=
  
  {FreeVision uses the Default8x16 font normally because that one contains the ASCII
   characters needed to draw the window elements on the screen. You can force it to
@@ -455,8 +455,8 @@ begin
  {Wait for C: drive to be ready}
  //while not DirectoryExists('C:\') do
  // begin
- //  {Sleep for a second}
- //  Sleep(1000);
+ //  {Sleep for a moment}
+ //  Sleep(100);
  // end;
  
  {Intitialize our FreeVision app}
