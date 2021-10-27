@@ -14,7 +14,7 @@ Note that some of these examples don't work on the Raspberry Pi 4B/400 as it use
 
 * OpenGLES - Some OpenGL ES examples written purely in Free Pascal.
 
-* OpenVG - A pair of OpenVG examples showing what you can do with the VGShapes unit which we have ported to Free Pascal from A J Starks libShapes.
+* OpenVG - Several OpenVG examples showing what you can do with the VGShapes unit which we have ported to Free Pascal from A J Starks libShapes.
 
 * RaspiCam - Two examples showing how RaspiStill and RaspiVid can be used at present to get access to the official Raspberry Pi camera from Ultibo.
 

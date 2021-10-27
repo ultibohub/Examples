@@ -13,3 +13,5 @@ Note that these examples don't work on the Raspberry Pi 4B/400 as it uses a diff
 * HelloVG - A simple introduction to the world of OpenVG, kind of Hello World for 2D graphics.
 
 * ShapesDemo - A demonstration of many of the available features of VGShapes, ported from the refcard example in the original library.
+
+* MultipleLayers - An example showing the use of multiple screen layers by combining the Hello VG example with some shapes moving around the screen.
