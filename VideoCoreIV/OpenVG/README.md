@@ -15,3 +15,5 @@ Note that these examples don't work on the Raspberry Pi 4B/400 as it uses a diff
 * ShapesDemo - A demonstration of many of the available features of VGShapes, ported from the refcard example in the original library.
 
 * MultipleLayers - An example showing the use of multiple screen layers by combining the Hello VG example with some shapes moving around the screen.
+
+* AppFontDemo - An example showing the use of the VGShapesLoadAppFont function to load custom application fonts into VGShapes and display them on multiple layers.

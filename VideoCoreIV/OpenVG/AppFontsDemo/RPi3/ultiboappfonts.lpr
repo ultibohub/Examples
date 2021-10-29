@@ -1,11 +1,22 @@
 program ultiboappfonts;
 
-{
- This example demonstrates how to use the VGShapesLoadAppFont() function to load
- application fonts into VGShapes, and how to access them using multiple layers.
-}
-
 {$mode objfpc}{$H+}
+
+{ VideoCore IV example - Multiple Layers                                       }
+{                                                                              }
+{ An example showing the use of the VGShapesLoadAppFont() function to load     }
+{ custom application fonts into VGShapes and display them on multiple layers.  }
+{                                                                              }
+{ Example contributed by Richard Metcalfe.                                     }
+{                                                                              }
+{ To compile the example select Run, Compile (or Run, Build) from the menu.    }
+{                                                                              }
+{ Once compiled copy the kernel7.img file to an SD card along with the         }
+{ firmware files and use it to boot your Raspberry Pi.                         }
+{                                                                              }
+{ This version is for Raspberry Pi 3B/3B+/3A+/Zero2W                           }
+{ To create a version for the A/B/A+/B+/Zero/2B simply create a new project    }
+{ and copy this code into it.                                                  }
 
 uses
   RaspberryPi3,
@@ -19,13 +30,8 @@ uses
   Ultibo,
   VGShapes,
   OpenVG,
-  dispmanx,
-  Shell,
-  ShellUpdate,
-  RemoteShell,
-  ShellFilesystem,
-  console
-  ;
+  DispmanX,
+  Console;
 
 {This file contains the actual font data. To generate this data, use the ultibo
  edition of the font2openvg at https://github.com/ric355/font2openvg
@@ -125,8 +131,6 @@ var
  lcdfont : PVGShapesFontInfo;
 
 begin
- SHELL_UPDATE_LOCAL_PATH:='c:\clusterkernel\';
-
  {we're going to put a console behind the openvg layers; you'll see it when openvg is closed
   near the end of the execution.}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
