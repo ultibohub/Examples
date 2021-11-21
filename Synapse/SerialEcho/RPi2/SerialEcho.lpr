@@ -12,10 +12,10 @@ program SerialEcho;
 { to find each of the GPIO connections on the physical pins of your Pi.        }
 {                                                                              }
 { Raspberry Pi Models A+/B+/Zero/2B/3B/4B/400 (40 pin header)                  }
-{   https://www.raspberrypi.org/documentation/usage/gpio/                      }
+{  https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header }
 {                                                                              }
 { Raspberry Pi Pinout (26 and 40 pin header)                                   }
-{   https://pinout.xyz/                                                        }
+{  https://pinout.xyz/                                                         }
 {                                                                              }
 { You will also need a terminal program running on your computer, you can use  }
 { something like PuTTY to create a serial connection to the COM port you are   }

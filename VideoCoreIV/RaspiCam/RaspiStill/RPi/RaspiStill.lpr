@@ -81,7 +81,7 @@ begin
   All functions are controlled by command line parameters, the most basic command is shown 
   below but the official documentation at
   
-   https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md
+   https://www.raspberrypi.com/documentation/accessories/camera.html#raspistill
   
   lists all of the available options} 
  

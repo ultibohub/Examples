@@ -80,7 +80,7 @@ begin
   All functions are controlled by command line parameters, the most basic command is shown 
   below but the official documentation at
   
-   https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md
+   https://www.raspberrypi.com/documentation/accessories/camera.html#raspivid
   
   lists all of the available options} 
  
