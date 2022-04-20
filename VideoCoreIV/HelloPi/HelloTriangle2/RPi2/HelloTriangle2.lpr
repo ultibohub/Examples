@@ -14,7 +14,7 @@ program HelloTriangle2;
 { To see the full effect of this example you should connect a USB mouse to     }
 { your Raspberry Pi, move the mouse to redraw the Mandelbrot.                  }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}

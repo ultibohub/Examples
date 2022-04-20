@@ -36,7 +36,7 @@ program BouncingBoxes;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B/3B+/3A+ version                                             }
+{  Raspberry Pi 3B/3B+/3A+/Zero2W version                                      }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}

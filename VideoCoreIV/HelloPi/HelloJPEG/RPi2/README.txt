@@ -4,4 +4,6 @@ Decoding a JPEG using the hardware JPEG decoder (note that this example is a dec
 
 This example directly imports the C code from the original hello_pi collection.
 
-Raspberry Pi 2B/3B/3B+/3A+ version
+Make sure you also copy the Beetroot.jpg file from this folder to your SD card.
+
+Raspberry Pi 2B/3B/3B+/3A+/Zero2W version

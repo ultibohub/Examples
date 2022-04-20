@@ -20,7 +20,7 @@ program GPIOHandling;
 {                                                                              }
 { The documentation below shows you where to find each of the pins.            }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B/4B/400 (40 pin header)                  }
+{ Raspberry Pi Models A+/B+/Zero/ZeroW/2B/3B/4B/400/Zero2W (40 pin header)     }
 {  https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header }
 {                                                                              }
 { Raspberry Pi Pinout (26 and 40 pin header)                                   }
@@ -32,7 +32,7 @@ program GPIOHandling;
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B/3B+/3A+ version                                             }
+{  Raspberry Pi 3B/3B+/3A+/Zero2W version                                      }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}

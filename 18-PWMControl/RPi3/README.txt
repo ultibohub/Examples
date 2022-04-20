@@ -4,4 +4,4 @@ An example demonstrating how to use PWM devices in Ultibo, we cycle a pair of LE
 
 You'll need a couple of LEDs and a pair of resistors plus some wire to try out this example. Also recommended would be a breadboard or breakout board connected to the Raspberry Pi GPIO header to avoid the possibility of accidentally damaging the Pi.
 
-Raspberry Pi 3B/3B+/3A+ version
+Raspberry Pi 3B/3B+/3A+/Zero2W version

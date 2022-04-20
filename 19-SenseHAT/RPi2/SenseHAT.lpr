@@ -10,6 +10,17 @@ program SenseHAT;
 { The joystick buttons are read and the names displayed on the LED matrix to   }
 { show which button was pressed.                                               }
 {                                                                              }
+{ If the device tree files (*.dtb) are present on your SD card then you must   }
+{ ensure the overlays folder is also present and add the following line to     }
+{ the config.txt file in the root directory:                                   }
+{                                                                              }
+{ dtoverlay=rpi-sense                                                          }
+{                                                                              }
+{ or alternatively disable device tree loading by adding the following line to }
+{ the config.txt file:                                                         }
+{                                                                              }
+{ device_tree=                                                                 }
+{                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }
 {                                                                              }
 {  Once compiled copy the kernel7.img file to an SD card along with the        }

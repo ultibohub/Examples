@@ -4,4 +4,4 @@ The basics of creating a DispmanX window and displaying graphics on top of the e
 
 This example directly imports the C code from the original hello_pi collection.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

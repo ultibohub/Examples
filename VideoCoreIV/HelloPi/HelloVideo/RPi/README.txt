@@ -4,4 +4,6 @@ Playing a small piece of h264 video using the OpenMAX IL libraries.
 
 This example directly imports the C code from the original hello_pi collection.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Make sure you also copy the test.h264 file from the Media folder to your SD card.
+
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

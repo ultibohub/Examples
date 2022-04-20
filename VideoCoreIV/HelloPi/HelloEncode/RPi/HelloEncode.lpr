@@ -11,7 +11,7 @@ program HelloEncode;
 { Once compiled copy the kernel.img file to an SD card along with the firmware }
 { files and use it to boot your Raspberry Pi.                                  }
 {                                                                              }
-{ This version is for Raspberry Pi A/B/A+/B+/Zero                              }
+{ This version is for Raspberry Pi A/B/A+/B+/Zero/ZeroW                        }
 
 uses
   RaspberryPi, {Include RaspberryPi to make sure all standard functions are included}

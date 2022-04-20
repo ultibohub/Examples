@@ -23,7 +23,7 @@ program MultiThreading;
 {  Once compiled copy the kernel.img file to an SD card along with the firmware}
 {  files and use it to boot your Raspberry Pi.                                 }
 {                                                                              }
-{  Raspberry Pi A/B/A+/B+/Zero version                                         }
+{  Raspberry Pi A/B/A+/B+/Zero/ZeroW version                                   }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}

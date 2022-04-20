@@ -24,8 +24,8 @@ program DedicatedCPU;
 {                                                                              }
 {                     !!! You have been warned !!!                             }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
-{  There is, of course, no Raspberry Pi A/B/A+/B+ or Zero version.             }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
+{  There is, of course, no Raspberry Pi A/B/A+/B+/Zero/ZeroW version.          }
 
 uses
   InitUnit,     {Include InitUnit to allow us to change the startup behaviour}

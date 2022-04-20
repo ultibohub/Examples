@@ -21,7 +21,7 @@ program PWMPCM;
 { This example is specific to the Raspberry Pi because it uses the PWM device  }
 { directly instead of using a generic audio device for playback.               }
 {                                                                              }
-{ This version is for Raspberry Pi 3B and will also work on a 3B+/3A+.         }
+{ This version is for Raspberry Pi 3B and will also work on a 3B+/3A+/Zero2W.  }
 { To create a version for the A/B/A+/B+/Zero/2B simply create a new project,   }
 { copy this code into it and modify where indicated below.                     }
 {                                                                              }

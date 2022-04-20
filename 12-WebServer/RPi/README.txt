@@ -6,4 +6,4 @@ Using the HTTP Listener class a simple web server can be created in just a few l
 
 Just for fun the Shell and RemoteShell units as also included so you can Telnet to the device and run commands.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

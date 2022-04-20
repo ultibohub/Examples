@@ -27,7 +27,7 @@ program PWMControl;
 {                                                                              }
 { The documentation below shows you where to find each of the pins.            }
 {                                                                              }
-{ Raspberry Pi Models A+/B+/Zero/2B/3B/4B/400 (40 pin header)                  }
+{ Raspberry Pi Models A+/B+/Zero/ZeroW/2B/3B/4B/400/Zero2W (40 pin header)     }
 {  https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header }
 {                                                                              }
 { Raspberry Pi Pinout (26 and 40 pin header)                                   }

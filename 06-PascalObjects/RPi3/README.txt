@@ -4,4 +4,4 @@ Free Pascal supports both procedural programming and object oriented programming
 
 This example demonstrates a few of the object pascal classes available in the standard RTL.
 
-Raspberry Pi 3B/3B+/3A+ version
+Raspberry Pi 3B/3B+/3A+/Zero2W version

@@ -17,7 +17,7 @@ program MultipleLayers;
 {                                                                              }
 { gpu_mem=128                                                                  }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
 { To create a version for the A/B/A+/B+/Zero simply create a new project and   }
 { copy this code into it.                                                      }
 

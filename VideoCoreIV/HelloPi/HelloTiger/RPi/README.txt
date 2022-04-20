@@ -4,4 +4,4 @@ A basic OpenVG example showing a rotating picture of a tiger, this example uses 
 
 This example directly imports the C code from the original hello_pi collection.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

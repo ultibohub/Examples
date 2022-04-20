@@ -4,4 +4,4 @@ Finally the examples you've been waiting to see, multiple threads and multiple C
 
 Even though you might not realise it Ultibo is always multi threaded, even the simplest hello world example has a number of threads running in the background.
 
-Raspberry Pi 3B/3B+/3A+ version
+Raspberry Pi 3B/3B+/3A+/Zero2W version

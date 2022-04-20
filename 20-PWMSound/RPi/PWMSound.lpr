@@ -29,7 +29,7 @@ program PWMSound;
 {  Make sure you also copy the a2002011001-e02.pcm from the folder above which }
 {  contains the audio sample to be played.                                     }
 {                                                                              }
-{  Raspberry Pi A/B/A+/B+/Zero version                                         }
+{  Raspberry Pi A/B/A+/B+/Zero/ZeroW version                                   }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}

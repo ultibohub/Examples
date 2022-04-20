@@ -20,7 +20,7 @@ program RaspiVid;
 { start_x=1                                                                    }
 { gpu_mem=128                                                                  }
 {                                                                              }
-{ This version is for Raspberry Pi A/B/A+/B+/Zero                              }
+{ This version is for Raspberry Pi A/B/A+/B+/Zero/ZeroW                        }
 
 uses
   RaspberryPi, {Include RaspberryPi to make sure all standard functions are included}

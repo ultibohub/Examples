@@ -12,12 +12,12 @@ program HelloJPEG;
 { Once compiled copy the kernel7.img file to an SD card along with the         }
 { firmware files and use it to boot your Raspberry Pi.                         }
 {                                                                              }
-{ Make sure you also copy the Beetroot.jpg file from the Media folder.         }
+{ Make sure you also copy the Beetroot.jpg file from this folder.              }
 {                                                                              }
 { Remember that this example only demonstrates decoding a JPEG in hardware and }
 { will not display the picture on screen.                                      }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}

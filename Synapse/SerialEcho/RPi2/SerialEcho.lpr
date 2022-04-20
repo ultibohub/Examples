@@ -32,7 +32,7 @@ program SerialEcho;
 { Once compiled copy the kernel7.img file to an SD card along with the         }
 { firmware files and use it to boot your Raspberry Pi.                         }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
 { To create a version for the A/B/A+/B+/Zero or for the 4B/400 simply create a }
 { new project, copy this code into it and modify as required.                  }
 {                                                                              }

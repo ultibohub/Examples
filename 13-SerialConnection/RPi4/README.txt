@@ -8,11 +8,11 @@ By default the serial (UART) device on the Raspberry Pi will be on pins 14 (Tran
 
 Raspberry Pi Model A and B
 
-https://www.raspberrypi.org/documentation/usage/gpio/
+ https://pinout.xyz/
  
-Raspberry Pi Models A+/A+/Zero/2B/3B/3B+/3A+/4B
+Raspberry Pi Models A+/B+/Zero/ZeroW/2B/3B/3B+/3A+/4B/400/Zero2W
 
-https://www.raspberrypi.org/documentation/usage/gpio/
+ https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header
 
 You will also need a terminal program like PuTTY on your computer to open the appropriate COM port and type some characters.
 

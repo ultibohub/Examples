@@ -4,4 +4,4 @@ An example demonstrating how to use the PWM devices to play audio in Ultibo, we 
 
 You'll need an audio playback device such as an amplifier, TV or headphones connected to the audio jack on your Raspberry Pi.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

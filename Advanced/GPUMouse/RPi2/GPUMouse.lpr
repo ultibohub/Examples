@@ -16,7 +16,7 @@ program GPUMouse;
 { This example is specific to the Raspberry Pi because it uses the GPU to draw }
 { the mouse, for a version that works on all platforms see Example 15 instead. }
 {                                                                              }
-{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+.      }
+{ This version is for Raspberry Pi 2B and will also work on a 3B/3B+/3A+/Zero2W}
 { To create a version for the A/B/A+/B+/Zero simply create a new project and   }
 { copy this code into it.                                                      }
 

@@ -4,4 +4,4 @@ Another example demonstrating the peripherals available in Ultibo, this time usi
 
 You'll need a few components to try this example, an LED and a resistor plus some wire and a switch. Also recommended would be a breadboard or breakout board connected to the Raspberry Pi GPIO header to avoid the possibility of accidentally damaging the Pi.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

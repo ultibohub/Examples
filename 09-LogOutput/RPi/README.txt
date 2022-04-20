@@ -4,4 +4,4 @@ This example shows how to output logging information to a console window.
 
 Ultibo supports logging to the console, to a file or to the network via syslog.
 
-Raspberry Pi A/B/A+/B+/Zero version
+Raspberry Pi A/B/A+/B+/Zero/ZeroW version

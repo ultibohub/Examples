@@ -9,4 +9,4 @@ Note: You must copy the additional firmware files start_x.elf and fixup_x.dat to
 start_x=1
 gpu_mem=128
 
-Raspberry Pi 2B/3B/3B+/3A+ version
+Raspberry Pi 2B/3B/3B+/3A+/Zero2W version

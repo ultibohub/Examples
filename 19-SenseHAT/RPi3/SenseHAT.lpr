@@ -10,12 +10,23 @@ program SenseHAT;
 { The joystick buttons are read and the names displayed on the LED matrix to   }
 { show which button was pressed.                                               }
 {                                                                              }
+{ If the device tree files (*.dtb) are present on your SD card then you must   }
+{ ensure the overlays folder is also present and add the following line to     }
+{ the config.txt file in the root directory:                                   }
+{                                                                              }
+{ dtoverlay=rpi-sense                                                          }
+{                                                                              }
+{ or alternatively disable device tree loading by adding the following line to }
+{ the config.txt file:                                                         }
+{                                                                              }
+{ device_tree=                                                                 }
+{                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }
 {                                                                              }
 {  Once compiled copy the kernel7.img file to an SD card along with the        }
 {  firmware files and use it to boot your Raspberry Pi.                        }
 {                                                                              }
-{  Raspberry Pi 3B/3B+/3A+ version                                             }
+{  Raspberry Pi 3B/3B+/3A+/Zero2W version                                      }
 {   What's the difference? See Project, Project Options, Config and Target.    }
 
 {Declare some units used by this example.}

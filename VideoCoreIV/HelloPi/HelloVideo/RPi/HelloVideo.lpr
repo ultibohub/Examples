@@ -13,7 +13,7 @@ program HelloVideo;
 {                                                                              }
 { Make sure you also copy the test.h264 file from the Media folder.            }
 {                                                                              }
-{ This version is for Raspberry Pi A/B/A+/B+/Zero                              }
+{ This version is for Raspberry Pi A/B/A+/B+/Zero/ZeroW                        }
 
 uses
   RaspberryPi, {Include RaspberryPi to make sure all standard functions are included}
