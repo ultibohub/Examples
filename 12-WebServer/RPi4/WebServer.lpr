@@ -40,6 +40,7 @@ uses
                     is not yet supported by Ultibo so it will not work for this example}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}
+  ShellUSB,        {Add the USB shell commands as well}
   RemoteShell;     {And the RemoteShell unit so we can Telnet to our Pi}
 
 {A window handle and some others.}
