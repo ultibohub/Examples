@@ -32,7 +32,8 @@ uses
   FileSystem,  {Include the file system core and interfaces}
   FATFS,       {Include the FAT file system driver}
   MMC,         {Include the MMC/SD core to access our SD card}
-  BCM2709;     {And also include the MMC/SD driver for the Raspberry Pi}
+  BCM2709,     {And also include the MMC/SD drivers for the Raspberry Pi}
+  BCMSDHOST;
 
 {A window handle plus a couple of others.}
 var
