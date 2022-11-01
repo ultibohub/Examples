@@ -33,6 +33,7 @@ uses
   FATFS,           {Plus the FAT file system unit}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}
+  ShellNetwork,    {Plus the Network shell commands}
   RemoteShell;     {And the RemoteShell unit so we can Telnet to our Pi}
 
 {A window handle and some others.}

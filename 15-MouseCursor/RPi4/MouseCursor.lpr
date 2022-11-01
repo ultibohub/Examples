@@ -27,7 +27,13 @@ uses
   BCM2711,
   SysUtils,
   Mouse,       {Mouse uses USB so that will be included automatically}
+  USBHID,      {Include the USB HID driver and the HID mouse consumer}
+  HIDMouse,
   DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
+               {Note that on the Pi 4 this is the USB host connected to the
+                USB-C connector and is only available to connect devices if
+                you power the Pi via the 40 pin header. The main USB controller
+                is not yet supported by Ultibo so it will not work for this example}
 
 {We'll need two window handles and some mouse tracking variables.}
 var

@@ -25,7 +25,9 @@ uses
   Console,
   Framebuffer,
   SysUtils,
-  Mouse;       {Mouse uses USB so that will be included automatically}
+  Mouse,       {Mouse uses USB so that will be included automatically}
+  USBHID,      {Include the USB HID driver and the HID mouse consumer}
+  HIDMouse;
 
 {We'll need two window handles and some mouse tracking variables.}
 var

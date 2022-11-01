@@ -37,6 +37,8 @@ uses
   ConsoleShell,    {Add the console shell and the filesystem commands so we can try out}
   ShellFilesystem, {the results. We also need the keyboard and USB driver for that.}
   Keyboard,
+  USBHID,          {Also include the USB HID driver and the HID keyboard consumer}
+  HIDKeyboard,
   DWCOTG;
 
 {We need a window handle plus some file system variables}

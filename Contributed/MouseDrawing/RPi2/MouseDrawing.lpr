@@ -26,8 +26,10 @@ uses
   BCM2709,
   SysUtils,
   Mouse,
-           //  Keyboard, {Keyboard uses USB so that will be included automatically}
-  DWCOTG,          {We need to include the USB host driver for the Raspberry Pi}
+  USBHID,      {Include the USB HID driver and the HID mouse consumer}
+  HIDMouse,
+  // Keyboard, {Keyboard uses USB so that will be included automatically}
+  DWCOTG,      {We need to include the USB host driver for the Raspberry Pi}
   linecircle;
 
 

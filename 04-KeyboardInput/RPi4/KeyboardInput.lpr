@@ -29,12 +29,14 @@ uses
   BCM2838,
   BCM2711,
   SysUtils,
-  Keyboard, {Keyboard uses USB so that will be included automatically}
-  DWCOTG;   {We need to include the USB host driver for the Raspberry Pi}
-            {Note that on the Pi 4 this is the USB host connected to the
-             USB-C connector and is only available to connect devices if
-             you power the Pi via the 40 pin header. The main USB controller
-             is not yet supported by Ultibo so it will not work for this example}
+  Keyboard,    {Keyboard uses USB so that will be included automatically}
+  USBHID,      {Include the USB HID driver and the HID keyboard consumer}
+  HIDKeyboard,
+  DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
+               {Note that on the Pi 4 this is the USB host connected to the
+                USB-C connector and is only available to connect devices if
+                you power the Pi via the 40 pin header. The main USB controller
+                is not yet supported by Ultibo so it will not work for this example}
 
 {We'll need a window handle again.}
 var

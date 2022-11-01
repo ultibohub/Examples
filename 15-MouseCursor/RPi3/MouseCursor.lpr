@@ -27,6 +27,8 @@ uses
   BCM2710,
   SysUtils,
   Mouse,       {Mouse uses USB so that will be included automatically}
+  USBHID,      {Include the USB HID driver and the HID mouse consumer}
+  HIDMouse,
   DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
 
 {We'll need two window handles and some mouse tracking variables.}

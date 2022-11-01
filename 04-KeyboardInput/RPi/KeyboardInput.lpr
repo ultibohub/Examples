@@ -29,8 +29,10 @@ uses
   BCM2835,
   BCM2708,
   SysUtils,
-  Keyboard, {Keyboard uses USB so that will be included automatically}
-  DWCOTG;   {We need to include the USB host driver for the Raspberry Pi}
+  Keyboard,    {Keyboard uses USB so that will be included automatically}
+  USBHID,      {Include the USB HID driver and the HID keyboard consumer}
+  HIDKeyboard,
+  DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
 
 {We'll need a window handle again.}
 var

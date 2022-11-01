@@ -39,6 +39,7 @@ uses
   DWCOTG,          {As well as the driver for the Raspberry Pi USB host}
   Shell,           {Add the Shell unit just for some fun}
   ShellFilesystem, {Plus the File system shell commands}
+  ShellNetwork,    {Plus the Network shell commands}
   ShellUSB,        {Add the USB shell commands as well}
   RemoteShell;     {And the RemoteShell unit so we can Telnet to our Pi}
 

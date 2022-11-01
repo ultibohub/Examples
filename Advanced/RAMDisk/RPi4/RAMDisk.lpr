@@ -34,6 +34,8 @@ uses
   ConsoleShell,    {Add the console shell and the filesystem commands so we can try out}
   ShellFilesystem, {the results. We also need the keyboard and USB driver for that.}
   Keyboard,
+  USBHID,          {Also include the USB HID driver and the HID keyboard consumer}
+  HIDKeyboard,
   DWCOTG;          {Note that on the Pi 4 this is the USB host connected to the
                     USB-C connector and is only available to connect devices if
                     you power the Pi via the 40 pin header. The main USB controller
