@@ -28,6 +28,7 @@ uses
   Mouse,
   USBHID,      {Include the USB HID driver and the HID mouse consumer}
   HIDMouse,
+  HIDTouch,
   // Keyboard, {Keyboard uses USB so that will be included automatically}
   DWCOTG,      {We need to include the USB host driver for the Raspberry Pi}
   linecircle;

@@ -34,6 +34,7 @@ uses
   Mouse,       {Mouse uses USB so that will be included automatically}
   USBHID,      {Include the USB HID driver and the HID mouse consumer}
   HIDMouse,
+  HIDTouch,
   DWCOTG,      {We need to include the USB host driver for the Raspberry Pi}
   HeapManager; {Include the heap manager so we can allocate some different types of memory}
 

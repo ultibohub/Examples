@@ -29,6 +29,7 @@ uses
   Mouse,       {Mouse uses USB so that will be included automatically}
   USBHID,      {Include the USB HID driver and the HID mouse consumer}
   HIDMouse,
+  HIDTouch,
   DWCOTG;      {We need to include the USB host driver for the Raspberry Pi}
 
 {We'll need two window handles and some mouse tracking variables.}
