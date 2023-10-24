@@ -84,7 +84,7 @@ begin
  ConsoleWindowWriteLnEx(Handle2,'This is some text in red',CurrentX,CurrentY,COLOR_RED,ConsoleWindowGetBackcolor(Handle2));
 
  {ConsoleWindowWriteLnEx() doesn't update the position of X and Y for us, we
-  need to move the to the next row so we can write the next line underneath}
+  need to move to the next row so we can write the next line underneath}
  Inc(CurrentY);
  ConsoleWindowSetY(Handle2,CurrentY);
  ConsoleWindowWriteLnEx(Handle2,'This is some text in green',CurrentX,CurrentY,COLOR_GREEN,ConsoleWindowGetBackcolor(Handle2));
@@ -100,7 +100,7 @@ begin
  {Update our original console}
  ConsoleWindowWriteLn(Handle1,'Printing some text at the bottom of the new console');
 
- {Wait about some text at the bottom of the screen instead, we'll use ConsoleWindowWriteEx()
+ {What about some text at the bottom of the screen instead, we'll use ConsoleWindowWriteEx()
   instead so it doesn't scroll the screen up}
  ConsoleWindowWriteEx(Handle2,'This text should be in the last row of the screen',CurrentX,ConsoleWindowGetMaxY(Handle2),ConsoleWindowGetForecolor(Handle2),ConsoleWindowGetBackcolor(Handle2));
 
