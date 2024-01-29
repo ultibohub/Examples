@@ -125,7 +125,7 @@ begin
       that are currently pressed.}
 
       {Check the buttons}
-      if MouseData.Buttons = 0 then
+      if (MouseData.Buttons and not(MOUSE_ABSOLUTE_X or MOUSE_ABSOLUTE_Y or MOUSE_ABSOLUTE_WHEEL)) = 0 then
        begin
         Buttons:='None';
        end
@@ -142,6 +142,22 @@ begin
         else if (MouseData.Buttons and MOUSE_RIGHT_BUTTON) = MOUSE_RIGHT_BUTTON then
          begin
           Buttons:='Right';
+         end
+        else if (MouseData.Buttons and MOUSE_MIDDLE_BUTTON) = MOUSE_MIDDLE_BUTTON then
+         begin
+          Buttons:='Middle';
+         end
+        else if (MouseData.Buttons and MOUSE_SIDE_BUTTON) = MOUSE_SIDE_BUTTON then
+         begin
+          Buttons:='Side';
+         end
+        else if (MouseData.Buttons and MOUSE_EXTRA_BUTTON) = MOUSE_EXTRA_BUTTON then
+         begin
+          Buttons:='Extra';
+         end
+        else if (MouseData.Buttons and MOUSE_TOUCH_BUTTON) = MOUSE_TOUCH_BUTTON then
+         begin
+          Buttons:='Touch';
          end
         else
          begin

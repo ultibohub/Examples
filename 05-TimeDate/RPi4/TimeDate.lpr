@@ -80,7 +80,7 @@ begin
     end;
   end;
 
- {Check out counter to see if we got here by success or failure}
+ {Check our counter to see if we got here by success or failure}
  if Counter <= 90 then
   begin
    {We must have been successful so let's print the date and time again}
