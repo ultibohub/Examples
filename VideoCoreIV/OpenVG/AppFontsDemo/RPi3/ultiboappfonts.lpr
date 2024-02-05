@@ -14,6 +14,11 @@ program ultiboappfonts;
 { Once compiled copy the kernel7.img file to an SD card along with the         }
 { firmware files and use it to boot your Raspberry Pi.                         }
 {                                                                              }
+{ You MUST create a config.txt file in the root directory with the following   }
+{ settings to provide sufficient GPU memory for this example:                  }
+{                                                                              }
+{ gpu_mem=128                                                                  }
+{                                                                              }
 { This version is for Raspberry Pi 3B/3B+/3A+/Zero2W                           }
 { To create a version for the A/B/A+/B+/Zero/2B simply create a new project    }
 { and copy this code into it.                                                  }
