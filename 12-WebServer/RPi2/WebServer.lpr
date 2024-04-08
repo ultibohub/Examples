@@ -28,6 +28,7 @@ uses
   MMC,             {Include the MMC/SD unit for access to the SD card}
   BCM2709,         {And the drivers for the Raspberry Pi SD host}
   BCMSDHOST,
+  USBStorage,
   SysUtils,
   HTTP,            {Include the HTTP unit for the server classes}
   Winsock2,        {Include the Winsock2 unit so we can get the IP address}

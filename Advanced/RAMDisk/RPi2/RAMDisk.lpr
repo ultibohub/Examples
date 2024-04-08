@@ -28,6 +28,7 @@ uses
   BCM2836,
   BCM2709,
   BCMSDHOST,
+  USBStorage,
   SysUtils,
   Ultibo,          {Include the Ultibo unit for some data types}
   FileSystem,      {Include the file system unit}

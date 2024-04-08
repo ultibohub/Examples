@@ -27,6 +27,7 @@ uses
   BCM2838,
   MMC,             {Include the MMC/SD unit for access to the SD card}
   BCM2711,         {And the driver for the Raspberry Pi SD host}
+  USBStorage,
   SysUtils,
   HTTP,            {Include the HTTP unit for the server classes}
   Winsock2,        {Include the Winsock2 unit so we can get the IP address}

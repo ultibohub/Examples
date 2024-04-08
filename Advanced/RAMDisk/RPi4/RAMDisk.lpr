@@ -25,6 +25,7 @@ uses
   Console,
   BCM2838,
   BCM2711,
+  USBStorage,
   SysUtils,
   Ultibo,          {Include the Ultibo unit for some data types}
   FileSystem,      {Include the file system unit}
