@@ -1,0 +1,5 @@
+{ "Joystick Gamepad (RPi)" : {
+   "Category" : "Ultibo (Raspberry Pi A/B/Zero)",
+   "Keywords" : ["HID", "Joystick"],
+   "Description" : "An example showing how to use the Joystick unit and the HID Joystick consumer, use the joystick or gamepad to move the cross around the screen and press the buttons to draw colored circles.\r\n\r\nRaspberry Pi A/B/A+/B+/Zero/ZeroW version"}
+}

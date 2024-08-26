@@ -1,0 +1,5 @@
+{ "PWM PCM (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["Audio", "PCM", "FIFO"],
+   "Description" : "An example of playing a PCM sound sample using the PWM device, unlike Example 20 which uses DMA to play the sound this example feeds the audio samples directly into the FIFO buffer. See the project header for more information.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

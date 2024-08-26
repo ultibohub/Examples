@@ -1,0 +1,5 @@
+{ "Dedicated CPU (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["CPU", "Real time"],
+   "Description" : "This example shows how to take control of a CPU in Ultibo core and use it as a high speed micro controller doing real time operations.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

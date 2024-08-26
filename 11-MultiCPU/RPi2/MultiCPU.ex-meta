@@ -1,0 +1,5 @@
+{ "Multi CPU (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["CPU", "Processor"],
+   "Description" : "Following on from the previous example on multi threading, this one shows the multi CPU behaviour of Ultibo.\r\n\r\nMulti CPU support is built in like multi threading, you don't need to enable anything it is just there.\r\n\r\nRaspberry Pi 2B version"}
+}

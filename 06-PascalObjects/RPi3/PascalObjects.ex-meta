@@ -1,0 +1,5 @@
+{ "Pascal Objects (RPi3)" : {
+   "Category" : "Ultibo (Raspberry Pi 3A/3B/Zero2)",
+   "Keywords" : ["Objects", "Classes"],
+   "Description" : "Free Pascal supports both procedural programming and object oriented programming, you can mix and match both within the same program and even within the same source file.\r\n\r\nThis example demonstrates a few of the object pascal classes available in the standard RTL.\r\n\r\nRaspberry Pi 3B/3B+/3A+/Zero2W version"}
+}

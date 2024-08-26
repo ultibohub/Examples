@@ -1,0 +1,5 @@
+{ "SenseHAT (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["LED", "Matrix", "Joystick"],
+   "Description" : "Reading the joystick and displaying text on the 8x8 LED matrix of the Raspberry Pi SenseHAT.\r\n\r\nNote: If the device tree files (*.dtb) are present on your SD card then you must ensure the overlays\r\n\r\n      folder is also present and add the following line to the config.txt file in the root directory:\r\n\r\ndtoverlay=rpi-sense\r\n\r\n      or alternatively disable device tree loading by adding the following line to the config.txt file:\r\n\r\ndevice_tree=\r\n\r\nRaspberry Pi 4B/400 version"}
+}

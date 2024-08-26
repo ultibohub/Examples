@@ -1,0 +1,5 @@
+{ "Mouse Cursor (QEMU)" : {
+   "Category" : "Ultibo (QEMU)",
+   "Keywords" : ["Mouse", "Pointer"],
+   "Description" : "A simple example of reading mouse movements and tracking the mouse pointer on the screen.\r\n\r\nQEMU VersatilePB version"}
+}

@@ -1,0 +1,5 @@
+{ "Bouncing Boxes (RPi3)" : {
+   "Category" : "Ultibo (Raspberry Pi 3A/3B/Zero2)",
+   "Keywords" : ["Graphics", "Animation", "Framebuffer"],
+   "Description" : "An example that demonstrates the use of the framebuffer device with a virtual width and height to allow multiple pages to be swapped in and out quickly. Using the framebuffer this way produces fast animation without hardware acceleration.\r\n\r\nThis example has been ported to Ultibo from the excellent series of articles entitled 'Low-level Graphics on Raspberry Pi' published by Raspberry Compote, you can find the original articles here http://raspberrycompote.blogspot.com.au/2012/12/low-level-graphics-on-raspberry-pi-part_9509.html\r\n\r\nRaspberry Pi 3B/3B+/3A+/Zero2W version"}
+}

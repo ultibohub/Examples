@@ -1,0 +1,5 @@
+{ "Mouse Cursor (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["Mouse", "Pointer"],
+   "Description" : "A simple example of reading mouse movements and tracking the mouse pointer on the screen.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

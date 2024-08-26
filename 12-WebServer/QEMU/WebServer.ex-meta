@@ -1,0 +1,5 @@
+{ "Web Server (QEMU)" : {
+   "Category" : "Ultibo (QEMU)",
+   "Keywords" : ["Web", "HTTP", "Sockets"],
+   "Description" : "This example shows the use of the HTTP unit in Ultibo which contain both client and server classes.\r\n\r\nUsing the HTTP Listener class a simple web server can be created in just a few lines of code.\r\n\r\nJust for fun the Shell and RemoteShell units as also included so you can Telnet to the device and run commands.\r\n\r\nQEMU VersatilePB version"}
+}

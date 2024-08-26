@@ -1,0 +1,5 @@
+{ "UDP Server (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["Winsock", "UDP", "Listener", "SysLog"],
+   "Description" : "An example of how to use the WinsockUDPListener class to create a threaded UDP server using the SysLog protocol as a demonstration.\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version, copy the code to a new project to create a version for A/B/A+/B+/Zero/ZeroW"}
+}

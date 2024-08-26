@@ -1,0 +1,5 @@
+{ "Time Date (QEMU)" : {
+   "Category" : "Ultibo (QEMU)",
+   "Keywords" : ["Time", "Date"],
+   "Description" : "This example starts the network in QEMU and obtains the time from a time server on the internet.\r\n\r\nIt also shows the use of some time and date functions and the timezone handling in Ultibo.\r\n\r\nQEMU VersatilePB version"}
+}

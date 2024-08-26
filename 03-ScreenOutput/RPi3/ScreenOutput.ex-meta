@@ -1,0 +1,5 @@
+{ "Screen Output (RPi3)" : {
+   "Category" : "Ultibo (Raspberry Pi 3A/3B/Zero2)",
+   "Keywords" : ["Console", "Output"],
+   "Description" : "Something a little more advanced this time, manipulating text on the screen using the Ultibo console functions.\r\n\r\nRaspberry Pi 3B/3B+/3A+/Zero2W version"}
+}

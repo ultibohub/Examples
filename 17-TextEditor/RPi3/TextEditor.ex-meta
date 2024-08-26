@@ -1,0 +1,5 @@
+{ "Text Editor (RPi3)" : {
+   "Category" : "Ultibo (Raspberry Pi 3A/3B/Zero2)",
+   "Keywords" : ["FreeVision", "Window"],
+   "Description" : "This example uses the FreeVision text mode windowing package to create a simple multi window text editor. The project is based on the FreeVision testapp example included with FPC and modified to work under Ultibo.\r\n\r\nRaspberry Pi 3B/3B+/3A+/Zero2W version"}
+}

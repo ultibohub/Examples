@@ -1,0 +1,5 @@
+{ "Serial Connection (QEMU)" : {
+   "Category" : "Ultibo (QEMU)",
+   "Keywords" : ["Serial", "UART"],
+   "Description" : "The first example that shows interfacing with the world using the peripheral devices, however because this is the QEMU version everything you need is already included.\r\n\r\nIn QEMU the output from the serial port is automatically sent to the serial console (select View, serial0 from the menu) and you can also type in the window to send serial input.\r\n\r\nQEMU VersatilePB version"}
+}

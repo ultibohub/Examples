@@ -1,0 +1,5 @@
+{ "GPU Mouse (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["GPU", "Mouse", "Cursor"],
+   "Description" : "An example of creating a mouse cursor image and tracking the mouse pointer on the screen. Also introduces detecting the Pi model and communicating with the GPU.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

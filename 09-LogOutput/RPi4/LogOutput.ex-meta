@@ -1,0 +1,5 @@
+{ "Log Output (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["Logging", "Debug"],
+   "Description" : "This example shows how to output logging information to a console window.\r\n\r\nUltibo supports logging to the console, to a file or to the network via syslog.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

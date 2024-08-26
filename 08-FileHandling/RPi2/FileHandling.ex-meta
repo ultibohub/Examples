@@ -1,0 +1,5 @@
+{ "File Handling (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["Files", "Folders"],
+   "Description" : "A simple demo of the file handling capability of Ultibo.\r\n\r\nAll standard file operations are supported on FAT, NTFS and CDFS file systems, devices supported include USB Flash drives, hard disks, CD/DVD drives as well as MMC/SD cards.\r\n\r\nRaspberry Pi 2B version"}
+}

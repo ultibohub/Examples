@@ -1,0 +1,5 @@
+{ "Hello World (RPi4)" : {
+   "Category" : "Ultibo (Raspberry Pi 4B/400)",
+   "Keywords" : ["Getting Started"],
+   "Description" : "The classic hello world example project for getting started with Ultibo.\r\n\r\nNot quite the standard single line example, demonstrates creating a console window and writing text on the screen.\r\n\r\nRaspberry Pi 4B/400 version"}
+}

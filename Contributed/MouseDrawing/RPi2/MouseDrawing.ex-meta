@@ -1,0 +1,5 @@
+{ "Mouse Drawing (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["Mouse", "Graphics", "Drawing"],
+   "Description" : "An combination of example 3 and example 15 to create a very simple drawing program.\r\n\r\nContributed by Mgreim 03.JUL.2016\r\n\r\nOriginal source: https://github.com/MGreim/ultibomousegraphicdemo\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version, copy the code to a new project to create a version for A/B/A+/B+/Zero/ZeroW"}
+}
