@@ -1,0 +1,5 @@
+{ "VideoCore IV - Hello Teapot (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["GPU", "MMAL", "OpenGLES"],
+   "Description" : "Using OpenGL ES and MMAL to show what the Raspberry Pi can do, if you haven't seen it before you should be impressed.\r\n\r\nThis example directly imports the C code from the original hello_pi collection.\r\n\r\nMake sure you also copy the teapot.obj.dat and test.h264 files from the Media folder to your SD card.\r\n\r\nNote: You must include the following setting in a config.txt file in the root directory of the SD card for this example:\r\n\r\ngpu_mem=128\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version"}
+}

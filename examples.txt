@@ -169,3 +169,20 @@
 
 ./examples/VideoCoreIV/HelloPi/HelloVideocube/RPi/HelloVideocube.ex-meta
 ./examples/VideoCoreIV/HelloPi/HelloVideocube/RPi2/HelloVideocube.ex-meta
+
+./examples/VideoCoreIV/OpenGLES/HelloGLES/RPi2/HelloGLES.ex-meta
+./examples/VideoCoreIV/OpenGLES/HelloGLES2/RPi2/HelloGLES2.ex-meta
+
+./examples/VideoCoreIV/OpenVG/AppFontsDemo/RPi3/AppFontsDemo.ex-meta
+./examples/VideoCoreIV/OpenVG/HelloVG/RPi2/HelloVG.ex-meta
+./examples/VideoCoreIV/OpenVG/MultipleLayers/RPi2/MultipleLayers.ex-meta
+./examples/VideoCoreIV/OpenVG/ShapesDemo/RPi2/ShapesDemo.ex-meta
+
+./examples/VideoCoreIV/RaspiCam/RaspiStill/RPi/RaspiStill.ex-meta
+./examples/VideoCoreIV/RaspiCam/RaspiStill/RPi2/RaspiStill.ex-meta
+./examples/VideoCoreIV/RaspiCam/RaspiStill/RPi4/RaspiStill.ex-meta
+
+./examples/VideoCoreIV/RaspiCam/RaspiVid/RPi/RaspiVid.ex-meta
+./examples/VideoCoreIV/RaspiCam/RaspiVid/RPi2/RaspiVid.ex-meta
+./examples/VideoCoreIV/RaspiCam/RaspiVid/RPi4/RaspiVid.ex-meta
+

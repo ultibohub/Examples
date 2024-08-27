@@ -1,0 +1,5 @@
+{ "VideoCore IV - Hello Tiger (RPi)" : {
+   "Category" : "Ultibo (Raspberry Pi A/B/Zero)",
+   "Keywords" : ["GPU", "OpenVG"],
+   "Description" : "A basic OpenVG example showing a rotating picture of a tiger, this example uses a picture embedded in the code.\r\n\r\nThis example directly imports the C code from the original hello_pi collection.\r\n\r\nRaspberry Pi A/B/A+/B+/Zero/ZeroW version"}
+}

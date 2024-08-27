@@ -1,0 +1,5 @@
+{ "VideoCore IV - Hello Videocube (RPi)" : {
+   "Category" : "Ultibo (Raspberry Pi A/B/Zero)",
+   "Keywords" : ["GPU", "3D", "Video"],
+   "Description" : "Combining the 3D cube from hello triangle with video from the previous example, very nice demonstration.\r\n\r\nThis example directly imports the C code from the original hello_pi collection.\r\n\r\nMake sure you also copy the test.h264 file from the Media folder to your SD card.\r\n\r\nNote: You must include the following setting in a config.txt file in the root directory of the SD card for this example:\r\n\r\ngpu_mem=128\r\n\r\nRaspberry Pi A/B/A+/B+/Zero/ZeroW version"}
+}

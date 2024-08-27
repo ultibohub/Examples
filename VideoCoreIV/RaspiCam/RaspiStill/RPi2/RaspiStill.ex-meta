@@ -1,0 +1,5 @@
+{ "VideoCore IV - RaspiStill (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["GPU", "Camera", "Image"],
+   "Description" : "An example showing how to control the RaspiStill application to take still images from the camera.\r\n\r\nThis example directly imports the C code from the original raspistill application.\r\n\r\nNote: You must copy the additional firmware files start_x.elf and fixup_x.dat to your SD card and include the following settings in a config.txt file in the root directory for this example:\r\n\r\nstart_x=1\r\ngpu_mem=128\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version"}
+}

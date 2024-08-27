@@ -1,0 +1,5 @@
+{ "VideoCore IV - Hello Triangle2 (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["GPU", "OpenGL ES", "Mandelbrot"],
+   "Description" : "Using an OpenGL ES 2 shader to draw a mandelbrot set.\r\n\r\nThis example directly imports the C code from the original hello_pi collection.\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version"}
+}

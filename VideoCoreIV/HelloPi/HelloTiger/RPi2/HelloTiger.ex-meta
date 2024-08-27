@@ -1,0 +1,5 @@
+{ "VideoCore IV - Hello Tiger (RPi2)" : {
+   "Category" : "Ultibo (Raspberry Pi 2B)",
+   "Keywords" : ["GPU", "OpenVG"],
+   "Description" : "A basic OpenVG example showing a rotating picture of a tiger, this example uses a picture embedded in the code.\r\n\r\nThis example directly imports the C code from the original hello_pi collection.\r\n\r\nRaspberry Pi 2B/3B/3B+/3A+/Zero2W version"}
+}
