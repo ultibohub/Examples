@@ -12,7 +12,7 @@ Raspberry Pi Model A and B
  
 Raspberry Pi Models A+/B+/Zero/ZeroW/2B/3B/3B+/3A+/4B/400/Zero2W
 
- https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header
+ https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio
 
 You will also need a terminal program like PuTTY on your computer to open the appropriate COM port and type some characters.
 
