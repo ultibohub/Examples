@@ -410,6 +410,9 @@ begin
   
   {Perform DMA transfer} 
   DMATransfer(DMAData,DMA_DIR_MEM_TO_DEV,DMA_DREQ_ID_PWM1);
+
+  {Free DMA Data}
+  FreeMem(DMAData);
  finally
   DMAReleaseBuffer(Output);
  end;
