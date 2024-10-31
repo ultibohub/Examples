@@ -6,8 +6,7 @@ program LogOutput;
 {                                                                              }
 {  A simple example of how to output logging information to a console window.  }
 {                                                                              }
-{                                                                              }
-{  Ultibo supports logging to the console, a file or to the network.           }
+{  Ultibo supports logging to the console, a file, a UART or to the network.   }
 {                                                                              }
 {  To compile the example select Run, Compile (or Run, Build) from the menu.   }
 {                                                                              }
