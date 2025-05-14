@@ -395,7 +395,8 @@ begin
   {Get DMA data}
   DMAData:=GetMem(SizeOf(TDMAData));
   if DMAData = nil then Exit;
-    
+  FillChar(DMAData,SizeOf(TDMAData),0);
+
   DMAData.Source:=Output;
   DMAData.Dest:=PBCM2708PWMDevice(PWM).Address + BCM2835_PWM_FIF1;
   DMAData.Size:=Samples * SizeOf(LongWord);
