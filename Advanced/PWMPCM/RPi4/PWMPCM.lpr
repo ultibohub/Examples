@@ -67,7 +67,7 @@ begin
  if Frequency = 0 then Exit;
 
  {Check Enabled}
- if not BCM2711PWMClockEnabled(PWM) then
+ if not BCM2711PWM0ClockEnabled(PWM) then
   begin
    {Get Divisors}
    DivisorI:=PWMPCM_PWM_PLLD_CLOCK div Frequency;
@@ -129,14 +129,14 @@ begin
  if PWM.GPIO = GPIO_PIN_UNKNOWN then
   begin
    {Check Channel}
-   case PBCM2711PWMDevice(PWM).Channel of
+   case PBCM2711PWM0Device(PWM).Channel of
     0:begin
       {Set GPIO 18}
-      if BCM2711PWMSetGPIO(PWM,GPIO_PIN_18) <> ERROR_SUCCESS then Exit;
+      if BCM2711PWM0SetGPIO(PWM,GPIO_PIN_18) <> ERROR_SUCCESS then Exit;
      end; 
     1:begin
       {Set GPIO 19}
-      if BCM2711PWMSetGPIO(PWM,GPIO_PIN_19) <> ERROR_SUCCESS then Exit;
+      if BCM2711PWM0SetGPIO(PWM,GPIO_PIN_19) <> ERROR_SUCCESS then Exit;
      end;
     else
      begin
@@ -152,16 +152,16 @@ begin
  DataMemoryBarrier; {Before the First Write}
  
  {Check Channel}
- case PBCM2711PWMDevice(PWM).Channel of
+ case PBCM2711PWM0Device(PWM).Channel of
   0:begin
     {PWM0 (PWM Channel 1)}
     {Enable PWEN, USEF and CLRF}
-    PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).CTL:=PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).CTL or BCM2838_PWM_CTL_PWEN1 or BCM2838_PWM_CTL_USEF1 or BCM2838_PWM_CTL_CLRF1;
+    PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).CTL:=PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).CTL or BCM2838_PWM_CTL_PWEN1 or BCM2838_PWM_CTL_USEF1 or BCM2838_PWM_CTL_CLRF1;
    end;
   1:begin
     {PWM1 (PWM Channel 2)}
     {Enable PWEN, USEF and CLRF}
-    PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).CTL:=PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).CTL or BCM2838_PWM_CTL_PWEN2 or BCM2838_PWM_CTL_USEF2 or BCM2838_PWM_CTL_CLRF1;
+    PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).CTL:=PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).CTL or BCM2838_PWM_CTL_PWEN2 or BCM2838_PWM_CTL_USEF2 or BCM2838_PWM_CTL_CLRF1;
    end;
   else
    begin
@@ -170,16 +170,16 @@ begin
  end;
  
  {Clear Status}
- PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).STA:=LongWord(-1);
+ PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).STA:=LongWord(-1);
 
  {$IF DEFINED(BCM2711_DEBUG) or DEFINED(PWM_DEBUG)}
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  CTL=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).CTL,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  STA=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).STA,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DMAC=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).DMAC,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  RNG1=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).RNG1,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DAT1=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).DAT1,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  RNG2=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).RNG2,8));
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DAT2=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).DAT2,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  CTL=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).CTL,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  STA=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).STA,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DMAC=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).DMAC,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  RNG1=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).RNG1,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DAT1=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).DAT1,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  RNG2=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).RNG2,8));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  DAT2=' + IntToHex(PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).DAT2,8));
  {$ENDIF}
  
  {Memory Barrier}
@@ -205,14 +205,14 @@ begin
  if Frequency = 0 then Exit;
  
  {Check Pair}
- if PBCM2711PWMDevice(PWM).Pair <> nil then
+ if PBCM2711PWM0Device(PWM).Pair <> nil then
   begin
    {Check Enabled}
-   if PBCM2711PWMDevice(PWM).Pair.PWM.PWMState = PWM_STATE_ENABLED then Exit;
+   if PBCM2711PWM0Device(PWM).Pair.PWM.PWMState = PWM_STATE_ENABLED then Exit;
   end;
   
  {Stop Clock}
- if BCM2711PWMClockStop(PWM) <> ERROR_SUCCESS then Exit;
+ if BCM2711PWM0ClockStop(PWM) <> ERROR_SUCCESS then Exit;
  
  {Check Enabled}
  if PWM.PWMState = PWM_STATE_ENABLED then
@@ -222,10 +222,10 @@ begin
   end; 
  
  {Update Scaler}
- PBCM2711PWMDevice(PWM).Scaler:=NANOSECONDS_PER_SECOND div Frequency;
+ PBCM2711PWM0Device(PWM).Scaler:=NANOSECONDS_PER_SECOND div Frequency;
  
  {$IF DEFINED(BCM2711_DEBUG) or DEFINED(PWM_DEBUG)}
- if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  Scaler=' + IntToStr(PBCM2711PWMDevice(PWM).Scaler));
+ if PWM_LOG_ENABLED then PWMLogDebug(PWM,'PWMPCM:  Scaler=' + IntToStr(PBCM2711PWM0Device(PWM).Scaler));
  {$ENDIF}
  
  {Update Properties}
@@ -233,14 +233,14 @@ begin
  PWM.Properties.Frequency:=Frequency;
  
  {Check Pair}
- if PBCM2711PWMDevice(PWM).Pair <> nil then
+ if PBCM2711PWM0Device(PWM).Pair <> nil then
   begin
    {Update Scaler}
-   PBCM2711PWMDevice(PWM).Pair.Scaler:=NANOSECONDS_PER_SECOND div Frequency;
+   PBCM2711PWM0Device(PWM).Pair.Scaler:=NANOSECONDS_PER_SECOND div Frequency;
    
    {Update Properties}
-   PBCM2711PWMDevice(PWM).Pair.PWM.Frequency:=Frequency;
-   PBCM2711PWMDevice(PWM).Pair.PWM.Properties.Frequency:=Frequency;
+   PBCM2711PWM0Device(PWM).Pair.PWM.Frequency:=Frequency;
+   PBCM2711PWM0Device(PWM).Pair.PWM.Properties.Frequency:=Frequency;
   end;
   
  {Return Result}
@@ -393,7 +393,7 @@ begin
   while Count < Samples do
    begin
     {Check FIFO}
-    Status:=PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).STA;
+    Status:=PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).STA;
     while ((Status and BCM2838_PWM_STA_FULL1) = 0) and (Count < Samples) do
      begin
       {Check for FIFO empty}
@@ -402,13 +402,13 @@ begin
         Inc(EmptyCount);
        end; 
       
-      PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).FIF1:=Output[Count];
+      PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).FIF1:=Output[Count];
       Inc(Count);
 
       {Skip channel 2}
       Inc(Count); 
       
-      Status:=PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).STA;
+      Status:=PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).STA;
      end;
      
     {Check for FIFO full}
@@ -421,7 +421,7 @@ begin
     {Check for GAP1 error}
     if (Status and BCM2838_PWM_STA_GAPO1) <> 0 then
      begin
-      PBCM2838PWMRegisters(PBCM2711PWMDevice(PWM).Address).STA:=BCM2838_PWM_STA_GAPO1;
+      PBCM2838PWMRegisters(PBCM2711PWM0Device(PWM).Address).STA:=BCM2838_PWM_STA_GAPO1;
       Inc(GAPCount);
      end;
    end; 
