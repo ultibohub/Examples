@@ -57,9 +57,9 @@ begin
         exit;
       repeat
         if terminated then break;
-      	buf := sock.RecvPacket(1000);
-      	if sock.lasterror = 0 then
-    	  begin
+          buf := sock.RecvPacket(1000);
+          if sock.lasterror = 0 then
+          begin
           snmprec.Clear;
           snmprec.DecodeBuf(buf);
           for n := 0 to snmprec.MIBCount - 1 do

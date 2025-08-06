@@ -32,23 +32,23 @@ var
  First:Boolean = True;
  WindowHandle:TWindowHandle;
 
-{Link our C library to include the original example} 
+{Link our C library to include the original example}
 {$linklib hello_triangle2}
- 
+
 {Import the main function of the example so we can call it from Ultibo}
 procedure hello_triangle2; cdecl; external 'hello_triangle2' name 'hello_triangle2';
- 
-{Export a function to allow the example access to the Ultibo mouse} 
-function ultibo_get_mouse(Width,Height:Integer;MouseX,MouseY:PInteger): Integer; cdecl; public name 'ultibo_get_mouse'; 
+
+{Export a function to allow the example access to the Ultibo mouse}
+function ultibo_get_mouse(Width,Height:Integer;MouseX,MouseY:PInteger): Integer; cdecl; public name 'ultibo_get_mouse';
 var
  Count:LongWord;
  Buffer:TMouseData;
 begin
  {}
  {In the Linux version of this example moving the mouse redraws the mandelbrot with new parameters
-  based on the movement of the mouse. This function simply replaces the calls to /dev/input/mouse 
+  based on the movement of the mouse. This function simply replaces the calls to /dev/input/mouse
   with calls to Ultibo mouse functions}
-  
+
  {Read a packet from the mouse}
  Count:=0;
  if not(First) and (MouseRead(@Buffer,SizeOf(TMouseData),Count) = ERROR_SUCCESS) then
@@ -63,23 +63,23 @@ begin
      Result:=1;
      Exit;
     end;*)
-    
+
    X:=X + Buffer.OffsetX;
    Y:=Y + Buffer.OffsetY;
-   
+
    if X < 0 then X:=0;
    if Y < 0 then Y:=0;
-   
+
    if X > Width then X:=Width;
    if Y > Height then Y:=Height;
   end;
- 
+
  First:=False;
- 
+
  {Return results}
  MouseX^:=X;
  MouseY^:=Y;
- 
+
  Result:=0;
 end;
 
@@ -88,12 +88,12 @@ begin
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
 
  ConsoleWindowWriteLn(WindowHandle,'Starting Hello Triangle2');
- 
+
  {Call the main function of the example, it will return here when completed (if ever)}
  hello_triangle2;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello Triangle2');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

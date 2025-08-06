@@ -26,12 +26,12 @@ uses
 var
  WindowHandle:TWindowHandle;
 
-{Link our C library to include the original example} 
+{Link our C library to include the original example}
 {$linklib hello_dispmanx}
- 
+
 {Import the main function of the example so we can call it from Ultibo}
 procedure hello_dispmanx; cdecl; external 'hello_dispmanx' name 'hello_dispmanx';
- 
+
 begin
  {Create a console window as usual}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
@@ -40,9 +40,9 @@ begin
 
  {Call the main function of the example, it will return here when completed (if ever)}
  hello_dispmanx;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello DispmanX');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

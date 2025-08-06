@@ -21,78 +21,78 @@ uses
   GraphicsConsole,
   SensorUnit;
 
-  
+
 type
  {A new class descended from THTTPDocument which allows us to create
   dynamic web content in response to a request to the web server}
  TGraphPage = class(THTTPDocument)
   constructor Create(AData:TSensorData);
-  
+
  private
   FData:TSensorData;
-  
+
   procedure AddHeader(AResponse:THTTPServerResponse);
   procedure AddFooter(AResponse:THTTPServerResponse);
   procedure AddContent(AResponse:THTTPServerResponse;const AContent:String);
-  
+
  protected
   {We need to override the DoGet method in order to return our content. There are also DoPost, DoPut, DoHead etc}
   function DoGet(AHost:THTTPHost;ARequest:THTTPServerRequest;AResponse:THTTPServerResponse):Boolean; override;
-  
+
  end;
- 
- 
+
+
  {A class to encapsulate the functionality of drawing the graph on the screen}
  TGraphWindow = class(TObject)
   constructor Create;
   destructor Destroy; override;
-  
+
  private
   FFont:THandle;
   FHandle:THandle;
   FWidth:LongWord;
   FHeight:LongWord;
-  
+
   FGraphTop:LongWord;
   FGraphLeft:LongWord;
   FGraphWidth:LongWord;
   FGraphHeight:LongWord;
-  
+
   FLastX:LongWord;
   FLastY:LongWord;
   FOffsetX:LongWord;
-  
+
  public
   property GraphWidth:LongWord read FGraphWidth;
   property GraphHeight:LongWord read FGraphHeight;
-  
+
   procedure DrawBackground;
   procedure DrawGraph;
- 
+
   procedure DrawData(AValue:LongWord);
-  
+
  end;
- 
- 
+
+
 type
  {And a TThread based thread class to continuously update our graph with new
   data from the sensor thread}
  TGraphThread = class(TThread)
   constructor Create(AData:TSensorData);
-  
+
  private
   FData:TSensorData;
   FWindow:TGraphWindow;
-  
+
  protected
   procedure Execute; override;
-  
+
  end;
- 
- 
+
+
 procedure StartGraphThread;
-  
-  
+
+
 implementation
 
 
@@ -103,7 +103,7 @@ begin
  {Set the name or this HTTP Document (eg http://<Server>/graph)}
  Name:='/graph';
  FData:=AData;
- 
+
 end;
 
 
@@ -163,7 +163,7 @@ begin
  AddContent(AResponse,'                    pointRadius: 1,');
  AddContent(AResponse,'                    pointHitRadius: 10,');
  AddContent(AResponse,'                    data: [');
- 
+
 end;
 
 
@@ -171,12 +171,12 @@ procedure TGraphPage.AddFooter(AResponse:THTTPServerResponse);
 begin
  {Add the footer HTML content, you could do things much smarter
   than this but I'm sure you can see the potential}
- AddContent(AResponse,'                    ],');                
+ AddContent(AResponse,'                    ],');
  AddContent(AResponse,'                    spanGaps: false,');
  AddContent(AResponse,'                }');
  AddContent(AResponse,'            ]');
- AddContent(AResponse,'        };');   
- AddContent(AResponse,'');       
+ AddContent(AResponse,'        };');
+ AddContent(AResponse,'');
  AddContent(AResponse,'        var options = {');
  AddContent(AResponse,'            showLines: true,');
  AddContent(AResponse,'            spanGaps: false,');
@@ -198,22 +198,22 @@ begin
  AddContent(AResponse,'                        stepSize: 100,');
  AddContent(AResponse,'                    }');
  AddContent(AResponse,'                }]');
- AddContent(AResponse,'            }');      
- AddContent(AResponse,'        };'); 
- AddContent(AResponse,'');  
+ AddContent(AResponse,'            }');
+ AddContent(AResponse,'        };');
+ AddContent(AResponse,'');
  AddContent(AResponse,'        window.onload = function() {');
  AddContent(AResponse,'            var ctx = document.getElementById("canvas").getContext("2d");');
  AddContent(AResponse,'            var myLineChart = new Chart(ctx, {');
  AddContent(AResponse,'                type: ''line'',');
  AddContent(AResponse,'                data: data,');
  AddContent(AResponse,'                options: options');
- AddContent(AResponse,'            });');            
+ AddContent(AResponse,'            });');
  AddContent(AResponse,'        };');
  AddContent(AResponse,'    </script>');
  AddContent(AResponse,'</body>');
  AddContent(AResponse,'');
  AddContent(AResponse,'</html>');
- 
+
 end;
 
 
@@ -222,11 +222,11 @@ begin
  {Add to the content of our page, when DoGet returns successfully everything in ContentString
   will be sent to the client that made the request}
  AResponse.ContentString:=AResponse.ContentString + AContent + HTTP_LINE_END;
- 
+
 end;
 
 
-function TGraphPage.DoGet(AHost:THTTPHost;ARequest:THTTPServerRequest;AResponse:THTTPServerResponse):Boolean; 
+function TGraphPage.DoGet(AHost:THTTPHost;ARequest:THTTPServerRequest;AResponse:THTTPServerResponse):Boolean;
 var
  Count:Integer;
  Total:Integer;
@@ -235,9 +235,9 @@ begin
  {The overridden DoGet method for our HTTP Document. The web server (THTTPListener) will call this method when
   a request is received which matches our registered URL, all we need to do is supply the content and a result}
  Result:=True;
- 
+
  AddHeader(AResponse);
- 
+
  Readings:=FData.GetReadings(Total);
  try
   for Count:=0 to Total do
@@ -253,10 +253,10 @@ begin
    end;
  finally
   FreeMem(Readings);
- end; 
- 
+ end;
+
  AddFooter(AResponse);
- 
+
 end;
 
 
@@ -264,10 +264,10 @@ end;
 constructor TGraphWindow.Create;
 begin
  inherited Create;
- 
+
  {Find the 8x8 font to use for the graph labels}
  FFont:=FontFindByName('Latin1-8x8');
- 
+
  {Create a graphics window on the default console device}
  FHandle:=GraphicsWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_BOTTOMRIGHT);
  if FHandle <> INVALID_HANDLE_VALUE then
@@ -275,7 +275,7 @@ begin
    {Get the width and height so we can scale our graph}
    FWidth:=GraphicsWindowGetWidth(FHandle);
    FHeight:=GraphicsWindowGetHeight(FHandle);
-   
+
    {Calculate the size available for display}
    {First the width}
    FGraphWidth:=100;
@@ -284,7 +284,7 @@ begin
      Inc(FGraphWidth,100);
     end;
    Dec(FGraphWidth,100);
-   
+
    {Then the height}
    FGraphHeight:=100;
    while FGraphHeight < (FHeight - 100) do
@@ -292,27 +292,27 @@ begin
      Inc(FGraphHeight,100);
     end;
    Dec(FGraphHeight,100);
-   
+
    {Center up the graph in the window}
    FGraphLeft:=(FWidth - FGraphWidth) div 2;
    FGraphTop:=(FHeight - FGraphHeight) div 2;
-   
+
    {Setup our starting point}
    FLastX:=1;
    FLastY:=0;
    FOffsetX:=24;
-  end; 
-  
+  end;
+
 end;
 
 
-destructor TGraphWindow.Destroy; 
+destructor TGraphWindow.Destroy;
 begin
  {Destroy our graphics window}
  GraphicsWindowDestroy(FHandle);
- 
+
  inherited Destroy;
- 
+
 end;
 
 
@@ -324,37 +324,37 @@ var
 begin
  {Draw the background of our graph, the title and labels plus the outline box}
  if FHandle = INVALID_HANDLE_VALUE then Exit;
- 
+
  {Get the rectangle of our console graphics window}
  Rect:=GraphicsWindowGetRect(FHandle);
- 
+
  {Clear the entire window to white}
  GraphicsWindowClearEx(FHandle,Rect.X1,Rect.Y1,Rect.X2,Rect.Y2,COLOR_WHITE);
- 
+
  {Draw our title, centered at the top of the window}
  Title:='Ultibo Sensormatic 3000';
  GraphicsWindowDrawTextEx(FHandle,FFont,Title,((Rect.X2 - Rect.X1) - (FontGetWidth(FFont) * Length(Title))) div 2,((FGraphTop - Rect.Y1) - FontGetHeight(FFont)) div 2,COLOR_RED,COLOR_WHITE);
- 
+
  {Draw a box around the actual graph in black}
  GraphicsWindowDrawBox(FHandle,FGraphLeft,FGraphTop,FGraphLeft + FGraphWidth - 1,FGraphTop + FGraphHeight - 1,COLOR_BLACK,1);
- 
+
  {Put labels on both the X and Y axis}
  Count:=0;
  while Count <= FGraphWidth do
   begin
    GraphicsWindowDrawTextEx(FHandle,FFont,IntToStr(Count),FGraphLeft + Count - ((Length(IntToStr(Count)) * FontGetWidth(FFont)) div 2),FGraphTop + FGraphHeight + FontGetHeight(FFont) + 1,COLOR_GRAY,COLOR_WHITE);
-   
+
    Inc(Count,100);
   end;
-  
+
  Count:=0;
  while Count <= FGraphHeight do
   begin
    GraphicsWindowDrawTextEx(FHandle,FFont,IntToStr(Count),FGraphLeft - 1 - ((Length(IntToStr(Count)) + 1) * FontGetWidth(FFont)),(FGraphTop + FGraphHeight) - Count,COLOR_GRAY,COLOR_WHITE);
-   
+
    Inc(Count,100);
   end;
- 
+
 end;
 
 
@@ -364,25 +364,25 @@ var
 begin
  {Draw the horizontal and vertical gridlines for the graph itself}
  if FHandle = INVALID_HANDLE_VALUE then Exit;
- 
+
  {First the vertical, every 25 pixels}
  Count:=25;
  while Count < FGraphWidth do
   begin
    GraphicsWindowDrawLine(FHandle,FGraphLeft + Count,FGraphTop + 1,FGraphLeft + Count,FGraphTop + FGraphHeight - 2,COLOR_MIDGRAY,1);
-   
+
    Inc(Count,25);
   end;
-  
+
  {And then the horizontal}
  Count:=25;
  while Count < FGraphHeight do
   begin
    GraphicsWindowDrawLine(FHandle,FGraphLeft + 1,FGraphTop + Count,FGraphLeft + FGraphWidth - 2,FGraphTop + Count,COLOR_MIDGRAY,1);
-   
+
    Inc(Count,25);
   end;
-  
+
 end;
 
 
@@ -394,14 +394,14 @@ var
 begin
  {Plot the actual data for our line graph, the value passed is the next value to draw}
  if FHandle = INVALID_HANDLE_VALUE then Exit;
- 
+
  {Output the value to the log, just to show how. You could also output to a file or to the network etc}
  LoggingOutput('Sensormatic: Next graph value is ' + IntToStr(AValue));
- 
+
  {Clamp our value within the allowed range}
  AValue:=Min(AValue,FGraphHeight);
  if AValue = 0 then AValue:=FLastY;
- 
+
  {Check if we are going up or down}
  if AValue = FLastY then
   begin
@@ -413,12 +413,12 @@ begin
    {Going up, draw a vertical line from new down to old}
    GraphicsWindowDrawLine(FHandle, FGraphLeft + FLastX, FGraphTop + FGraphHeight - AValue, FGraphLeft + FLastX, FGraphTop + FGraphHeight - FLastY, COLOR_RED, 1);
   end
- else if AValue < FLastY then 
+ else if AValue < FLastY then
   begin
    {Going down, draw a vertical line from old down to new}
    GraphicsWindowDrawLine(FHandle, FGraphLeft + FLastX, FGraphTop + FGraphHeight - FLastY, FGraphLeft + FLastX, FGraphTop + FGraphHeight - AValue, COLOR_RED, 1);
   end;
- 
+
  {Save the value for next time}
  FLastY:=AValue;
 
@@ -428,16 +428,16 @@ begin
   begin
    {If we did, scroll the entire window left 1 pixel}
    FLastX:=FGraphWidth - 3;
-   
+
    {Setup the source and destination points}
    Source.X:=FGraphLeft + 2;
    Source.Y:=FGraphTop + 1;
    Dest.X:=FGraphLeft + 1;
    Dest.Y:=FGraphTop + 1;
-   
+
    {Copy the rectangle from source to destination}
    GraphicsWindowCopyImage(FHandle, Source, Dest, FGraphWidth - 3, FGraphHeight - 1);
-   
+
    {Update our offset}
    Inc(FOffsetX);
    if FOffsetX >= 25 then
@@ -451,19 +451,19 @@ begin
     begin
      {Offset of less then 25, fill the last line with white}
      GraphicsWindowDrawLine(FHandle,FGraphLeft + FGraphWidth - 2,FGraphTop + 1,FGraphLeft + FGraphWidth - 2,FGraphTop + FGraphHeight - 2,COLOR_WHITE,1);
-     
+
      {And then extend our horizontal graph lines into the last line}
      Count:=25;
      while Count < FGraphHeight do
       begin
        GraphicsWindowDrawPixel(FHandle,FGraphLeft + FGraphWidth - 2,FGraphTop + Count,COLOR_MIDGRAY);
-       
+
        Inc(Count,25);
       end;
-     
-    end;    
-  end; 
-  
+
+    end;
+  end;
+
 end;
 
 
@@ -472,15 +472,15 @@ constructor TGraphThread.Create(AData:TSensorData);
 begin
  FData:=AData;
  inherited Create(False,THREAD_STACK_DEFAULT_SIZE);
- 
+
 end;
 
 
-procedure TGraphThread.Execute; 
+procedure TGraphThread.Execute;
 begin
  {The execute method, set the thread to Free on Terminate}
  FreeOnTerminate:=True;
- 
+
  {And set the thread name}
  ThreadSetName(ThreadGetCurrent,'Graph Thread');
 
@@ -488,11 +488,11 @@ begin
  FWindow:=TGraphWindow.Create;
  FWindow.DrawBackground;
  FWindow.DrawGraph;
- 
+
  {Check the sensor data min and max against the graph window width and height}
  if FData.MaxX > FWindow.GraphWidth - 1 then FData.MaxX:=FWindow.GraphWidth - 1;
  if FData.MaxY <> FWindow.GraphHeight - 1 then FData.MaxY:=FWindow.GraphHeight - 1;
- 
+
  {Go into an endless loop reading and writing the values}
  while not Terminated do
   begin
@@ -501,15 +501,15 @@ begin
      {Get the next value from the sensor data}
      {And write it to the graph window}
      FWindow.DrawData(FData.GetReading);
-    end; 
-   
+    end;
+
    {Sleep for a second and do it again}
    Sleep(1000);
-  end;  
- 
- {If we even do exit, free the graph window object} 
- FWindow.Free; 
- 
+  end;
+
+ {If we even do exit, free the graph window object}
+ FWindow.Free;
+
 end;
 
 
@@ -518,7 +518,7 @@ procedure StartGraphThread;
 begin
  {Create an instance of the graph thread and pass it the global sensor data object}
  TGraphThread.Create(SensorData);
- 
+
 end;
 
 

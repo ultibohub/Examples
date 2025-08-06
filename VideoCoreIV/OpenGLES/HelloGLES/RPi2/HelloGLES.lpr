@@ -30,7 +30,7 @@ uses
 
 var
  WindowHandle:TWindowHandle;
- 
+
 begin
  {Create a console window as usual}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
@@ -49,15 +49,15 @@ begin
 
  {The main purpose of this example is to demonstrate how to create an OpenGL ES 1.1 context
   and configure DispmanX, EGL and OpenGL ES so that you can perform OpenGL ES functions.
-  
+
   All of the code to demonstrate this is included in the GLESUnit which we simply call
   here using the StartGLES procedure.
-  
+
   Open the GLESUnit to see all the details of what it does}
  StartGLES;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello GLES');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

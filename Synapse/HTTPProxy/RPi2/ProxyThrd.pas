@@ -9,8 +9,8 @@ interface
 uses
   Classes, SyncObjs, SysUtils,
   {$IFDEF ULTIBO}
-    Threads, 
-  {$ELSE}  
+    Threads,
+  {$ELSE}
     windows,
   {$ENDIF}
   blcksock, synsock, synautil;

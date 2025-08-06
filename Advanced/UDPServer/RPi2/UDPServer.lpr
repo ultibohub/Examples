@@ -22,19 +22,19 @@ uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}
   Threads,
   ServerUnit;   {Include ServerUnit which contains the main code for our server}
- 
+
 begin
  {Like most typical Free Pascal applications, the program file itself doesn't
   contain very much. All we do here is some initialization and call the start
   function in the ServerUnit. Switch over to there to see what is happening}
-  
- {Initialize our UDP Server} 
+
+ {Initialize our UDP Server}
  ServerInit;
- 
+
  {Start our UDP Server}
- ServerStart; 
- 
+ ServerStart;
+
  {Halt the thread if we return}
  ThreadHalt(0);
 end.
- 
+

@@ -16,7 +16,7 @@ uses
   Threads;
 
 implementation
- 
+
 initialization
  {Disable thread allocation for CPU 3}
  SchedulerAllocationDisable(CPU_ID_3);

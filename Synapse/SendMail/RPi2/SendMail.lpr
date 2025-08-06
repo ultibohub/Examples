@@ -39,16 +39,16 @@ uses
 
 var
  Handle:THandle;
-  
+
  ToAddress:String = 'someone@somewhere.com'; {Change these addresses to use your own}
  FromAddress:String = 'someone@somewhere.com';
 
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse Send Mail Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -58,12 +58,12 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Wait a few seconds for the network to be ready}
  Sleep(3000);
- 
+
  {Send the email}
- {If you receive "Login failed" messages it may be because your ISP blocks outbound 
+ {If you receive "Login failed" messages it may be because your ISP blocks outbound
   connections to port 25, this is a common industry practice to prevent spam. You may
   need to set the EmailHost variable in the MailSend unit to the mail host of your ISP}
  if SendEmail(ToAddress,FromAddress) then
@@ -73,9 +73,9 @@ begin
  else
   begin
    ConsoleWindowWriteLn(Handle,'Send email failed');
-  end;  
- 
- {Halt the main thread} 
+  end;
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

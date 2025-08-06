@@ -37,30 +37,30 @@ uses
   WebStatus,
   ThreadUnit;   {Include our thread unit which contains most of the example}
 
-  
+
 var
  LeftWindow:TWindowHandle;
  HTTPListener:THTTPListener;
- 
- 
+
+
 begin
  {Create a console window to show what is happening}
  LeftWindow:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_LEFT,True);
- 
+
  {Display a startup message on the console}
  ConsoleWindowWriteLn(LeftWindow,'Starting dedicated CPU example');
- 
+
  {Create and start the HTTP Listener for our web status page}
  HTTPListener:=THTTPListener.Create;
  HTTPListener.Active:=True;
- 
+
  {Register the web status page, the "Thread List" page will allow us to see what is happening in the example}
  WebStatusRegister(HTTPListener,'','',True);
- 
+
  {Start our dedicated CPU thread}
  StartDedicatedThread(LeftWindow);
- 
+
  {Halt this thread}
  ThreadHalt(0);
 end.
- 
+

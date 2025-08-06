@@ -39,7 +39,7 @@ uses
  Threads,
  Console,
  SysUtils,
- 
+
  {The main FreeVision units for App, Views, Drivers etc}
  Objects,
  Drivers,
@@ -55,8 +55,8 @@ uses
  TimedDlg,
  MsgBox,
  StdDlg;
- 
-{Some constants used by the TVDemo object} 
+
+{Some constants used by the TVDemo object}
 const
  cmAppToolbar = 1000;
  cmWindow1    = 1001;
@@ -67,7 +67,7 @@ const
  cmCloseWindow1    = 1101;
  cmCloseWindow2    = 1102;
  cmCloseWindow3    = 1103;
- 
+
 {---------------------------------------------------------------------------}
 {           TTVDemo OBJECT - STANDARD APPLICATION WITH MENU                 }
 {---------------------------------------------------------------------------}
@@ -97,11 +97,11 @@ type
     procedure OpenFile;
     procedure CloseWindow(var P : PGroup);
   end;
- 
+
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
 {                           TTvDemo OBJECT METHODS                          }
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
- 
+
 constructor TTvDemo.Init;
 var
  R: TRect;
@@ -125,7 +125,7 @@ begin
    Clipboard := ClipboardWindow^.Editor;
  end;
 end;
- 
+
 procedure TTVDemo.Idle;
 
  function IsTileable(P: PView): Boolean;
@@ -133,7 +133,7 @@ procedure TTVDemo.Idle;
    IsTileable := (P^.Options and ofTileable <> 0) and
      (P^.State and sfVisible <> 0);
  end;
- 
+
 begin
  inherited Idle;
  Clock^.Update;
@@ -143,7 +143,7 @@ begin
  else
    DisableCommands([cmTile, cmCascade]);
 end;
- 
+
 procedure TTVDemo.HandleEvent(var Event : TEvent);
 begin
  inherited HandleEvent(Event);                      { Call ancestor }
@@ -170,7 +170,7 @@ begin
  end;
  ClearEvent(Event);
 end;
- 
+
 procedure TTVDemo.InitMenuBar;
 var
  R: TRect;
@@ -203,7 +203,7 @@ begin
   nil))))) //end NewSubMenus
  ))); //end MenuBar
 end;
- 
+
 procedure TTvDemo.InitDesktop;
 var
  R: TRect; {ToolBar: PToolBar;}
@@ -229,7 +229,7 @@ begin
    End;*)
  Desktop := New(PDeskTop, Init(R));
 end;
- 
+
 procedure TTVDemo.InitStatusLine;
 var
  R: TRect;
@@ -248,13 +248,13 @@ begin
      )
    )
  );
- 
+
  GetExtent(R);
  R.A.X := R.B.X - 12; R.A.Y := R.B.Y - 1;
  Heap := New(PHeapView, Init(R));
  Insert(Heap);
 end;
- 
+
 procedure TTvDemo.Window1;
 var
  R: TRect; P: PGroup;
@@ -417,57 +417,57 @@ begin
    P3:=P;
  end;
 end;
- 
+
 var
  MyApp: TTvDemo;
- 
+
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
 {                             MAIN PROGRAM START                            }
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
- 
+
 begin
  {We don't need to create a console window, the FreeVision library does all of the for us.
- 
+
   There are some parameters in the GlobalConfig unit that control where and how the
   console window is created and we can change this before initializing our app to
   setup the behaviour the way we want it.}
 
  {We can control the position of the console window using CONSOLE_VIDEO_POSITION.
- 
+
   It defaults to CONSOLE_POSITION_FULL but in this case we'll set it to CONSOLE_POSITION_LEFT
   instead so the app only occupies half of the window}
  CONSOLE_VIDEO_POSITION:=CONSOLE_POSITION_LEFT;
- 
+
  {The CONSOLE_VIDEO_DEVICE variable allow us to specify a device other than the default
   console so our FreeVision app could appear on a small TFT screen or somewhere else}
  //CONSOLE_VIDEO_DEVICE:='';
- 
+
  {If we already have a console window and want the FreeVision app to appear on it then
   we can just assign the Handle to the CONSOLE_VIDEO_WINDOW variable}
  //CONSOLE_VIDEO_WINDOW:=
- 
+
  {FreeVision uses the Default8x16 font normally because that one contains the ASCII
   characters needed to draw the window elements on the screen. You can force it to
   use another font by setting the CONSOLE_VIDEO_FONT variable. Setting it to the
   Default8x9 font will allow a lot of text on the screen at once}
  //CONSOLE_VIDEO_FONT:='Default8x9';
- 
+
  {Wait for C: drive to be ready}
  while not DirectoryExists('C:\') do
   begin
    {Sleep for a moment}
    Sleep(100);
   end;
- 
+
  {Intitialize our FreeVision app}
- MyApp.Init;                    
- 
+ MyApp.Init;
+
  {Run our app which will only return if an error occurs or we choose exit from the menu}
- MyApp.Run; 
- 
+ MyApp.Run;
+
  {Call Done to dispose of the objects and cleanup}
  MyApp.Done;
- 
- {Halt the current thread if we exit from the FreeVision app} 
+
+ {Halt the current thread if we exit from the FreeVision app}
  ThreadHalt(0);
 end.

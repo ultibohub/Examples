@@ -46,14 +46,14 @@ begin
  {Output some welcome text on the console window}
  ConsoleWindowWriteLn(WindowHandle,'Welcome to Example 13 Serial Connection');
  ConsoleWindowWriteLn(WindowHandle,'Go to the serial console by selecting View, serial0 from the menu');
- 
+
  {First we need to open the serial device and set the speed and other parameters.
 
-  Because this is the QEMU version of the example the settings are not really used 
+  Because this is the QEMU version of the example the settings are not really used
   because the emulated hardware doesn't do anything different no matter what settings
-  we choose. It's still a good idea to set them anyway because you'll need to do it 
+  we choose. It's still a good idea to set them anyway because you'll need to do it
   when running on real hardware.
- 
+
   We can use the SerialOpen function in the Platform unit to open the default serial
   device or we can use the SerialDeviceOpen function in the Serial unit if we need
   to specify which device to open.
@@ -61,7 +61,7 @@ begin
   We'll use SerialOpen and specify 9600 as the speed with 8 data bits, 1 stop bit,
   no parity and no flow control. The constants used here can be found in the GlobalConst
   unit.
-  
+
   The last 2 parameters allow setting the size of the transmit and receive buffers,
   passing 0 means use the default size.}
  if SerialOpen(9600,SERIAL_DATA_8BIT,SERIAL_STOP_1BIT,SERIAL_PARITY_NONE,SERIAL_FLOW_NONE,0,0) = ERROR_SUCCESS then

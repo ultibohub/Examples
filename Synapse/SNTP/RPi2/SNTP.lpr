@@ -41,9 +41,9 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse SNTP Client Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -53,17 +53,17 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Wait a few seconds for the network to be ready}
  Sleep(3000);
- 
+
  {Create the SNTP client}
  SntpClient:=TSntpSend.Create;
  try
   SntpClient.TargetHost:='pool.ntp.org';
   ConsoleWindowWriteLn(Handle,'Requesting SNTP time from ' + SntpClient.TargetHost);
   ConsoleWindowWriteLn(Handle,'');
-  
+
   if SntpClient.GetSNTP then
    begin
     ConsoleWindowWriteLn(Handle,'SNTP time is ' + DateTimeToStr(SntpClient.NTPTime) + ' UTC');
@@ -71,12 +71,12 @@ begin
   else
    begin
     ConsoleWindowWriteLn(Handle,'Could not contact SNTP server ' + SntpClient.TargetHost);
-   end;  
+   end;
  finally
   SntpClient.Free;
  end;
- 
- {Halt the main thread} 
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

@@ -40,9 +40,9 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse FTP Server Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -52,25 +52,25 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Create the TFTP server thread}
  TTFTPDaemonThread.Create('C:\','0.0.0.0','69',Handle);
- 
+
  {The TTFTPDaemonThread classes uses Synchronize which waits on the MainThread.
-  
+
   Even though Synchronize isn't really needed for writing to the console or other
-  operations in Ultibo it still works, the main thread needs to periodically 
+  operations in Ultibo it still works, the main thread needs to periodically
   check for events.
-  
+
   Calling CheckSynchronize will process any events waiting from Synchronize calls}
  while True do
   begin
    CheckSynchronize;
-   
+
    Sleep(0);
-  end; 
-  
- {Halt the main thread} 
+  end;
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

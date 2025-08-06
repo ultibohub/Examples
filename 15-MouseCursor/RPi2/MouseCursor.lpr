@@ -46,7 +46,7 @@ var
 
  ScalingX:Double;
  ScalingY:Double;
- 
+
  ScreenWidth:LongWord;
  ScreenHeight:LongWord;
 
@@ -70,17 +70,17 @@ begin
    First we need to find out how big the screen is in pixels wide and high, to do this
    we ask for the default framebuffer device and then retrieve the properties which will
    give us the size as well as lots of other information.
-   
+
    Get the default framebuffer device}
   FramebufferDevice:=FramebufferDeviceGetDefault;
-  
+
   {Get the properties of the default framebuffer}
   FramebufferDeviceGetProperties(FramebufferDevice,@FramebufferProperties);
-  
+
   {Get the screen width and height from the properties}
   ScreenWidth:=FramebufferProperties.PhysicalWidth;
   ScreenHeight:=FramebufferProperties.PhysicalHeight;
-  
+
   {Print our screen dimensions on the console}
   ConsoleWindowWriteLn(Handle1,'Screen is ' + IntToStr(ScreenWidth) + ' pixels wide by ' + IntToStr(ScreenHeight) + ' pixels high');
 
@@ -172,13 +172,13 @@ begin
          the cursor X value relative to the size of our screen}
         ScalingX:=MouseData.MaximumX / ScreenWidth;
         if ScalingX <= 0 then ScalingX:=1.0;
-        
+
         CursorX:=Trunc(MouseData.OffsetX / ScalingX);
        end
       else
        begin
         CursorX:=CursorX + MouseData.OffsetX;
-       end; 
+       end;
       if CursorX < 0 then CursorX:=0;
       if CursorX > (ScreenWidth - 1) then CursorX:=ScreenWidth - 1;
 
@@ -188,7 +188,7 @@ begin
         {Use maximum Y to scale the Y value to the screen}
         ScalingY:=MouseData.MaximumY / ScreenHeight;
         if ScalingY <= 0 then ScalingY:=1.0;
-        
+
         CursorY:=Trunc(MouseData.OffsetY / ScalingY);
        end
       else
@@ -199,7 +199,7 @@ begin
       if CursorY > (ScreenHeight - 1) then CursorY:=ScreenHeight - 1;
 
       {And move the cursor on the screen}
-      FramebufferDeviceUpdateCursor(FramebufferDevice,True,CursorX,CursorY,False); 
+      FramebufferDeviceUpdateCursor(FramebufferDevice,True,CursorX,CursorY,False);
      end
     else
      begin

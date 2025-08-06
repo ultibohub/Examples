@@ -38,7 +38,7 @@ program Sensormatic3000;
 uses
   {Initialization unit to adjust the default behavior}
   InitUnit,
-  
+
   {The standard Ultibo units included by default}
   RaspberryPi2,
   GlobalConfig,
@@ -49,21 +49,21 @@ uses
   SysUtils,
   Classes,
   Ultibo,
-  
+
   {Some extra Ultibo units for shell, RTC and shell commands}
   ConsoleShell,
   DS1307,
   RemoteShell,
   ShellFilesystem,
   ShellUpdate,
-  
+
   {Plus some extra font units which register themselves during boot}
   Latin1_8x8,
   Latin1_8x14,
   Sun_12x22,
   Bitstream_Vera_Sans_Mono_25,
   Bitstream_Vera_Sans_Mono_40, {Bitstream Vera Sans Mono font thanks to The Gnome Project}
-  
+
   {The individual units for our project}
   MainUnit,
   GraphUnit,
@@ -73,10 +73,10 @@ uses
 begin
   {Not much here, start the program, halt the main thread}
   SensormaticStart;
-  
+
   {Notice that I said "Halt the main thread", there is nothing really special about the main
    thread in Ultibo core. In fact it is not even the actual thread that starts the computer}
   ThreadHalt(0);
-  
+
 end.
 

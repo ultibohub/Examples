@@ -76,7 +76,7 @@ begin
 end;
 
 function IsIPAddress(const Value:String):Boolean;
-var 
+var
   n,x,i: Integer;
   Posi:array[1..4] of Integer;
   Octet:array[1..4] of String;

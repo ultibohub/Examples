@@ -40,9 +40,9 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse HTTP Proxy Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -52,14 +52,14 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Initialize the HTTP Proxy}
  InitService;
- 
+
  {Create the HTTP Proxy}
  TServiceThread.Create;
- 
- {Halt the main thread} 
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

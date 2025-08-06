@@ -7,10 +7,10 @@ unit httpthrd;
 interface
 
 uses
-  Classes, blcksock, 
+  Classes, blcksock,
   {$IFDEF ULTIBO}
   GlobalSock,
-  {$ELSE}  
+  {$ELSE}
   winsock,
   {$ENDIF}
   Synautil, SysUtils;

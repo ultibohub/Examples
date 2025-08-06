@@ -26,23 +26,23 @@ uses
 var
  WindowHandle:TWindowHandle;
 
-{Link our C library to include the original example} 
+{Link our C library to include the original example}
 {$linklib hello_tiger}
- 
+
 {Import the main function of the example so we can call it from Ultibo}
 procedure hello_tiger; cdecl; external 'hello_tiger' name 'hello_tiger';
- 
+
 begin
  {Create a console window as usual}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
 
  ConsoleWindowWriteLn(WindowHandle,'Starting Hello Tiger');
- 
+
  {Call the main function of the example, it will return here when completed (if ever)}
  hello_tiger;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello Tiger');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

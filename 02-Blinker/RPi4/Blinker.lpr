@@ -63,7 +63,7 @@ begin
 
    {Turn off the LED}
    ActivityLEDOff;
-   
+
    {Wait a while before turning the LED back on again.}
    ThreadSleep(500);
 

@@ -94,7 +94,7 @@ begin
  if not DirectoryExists('C:\') then
   begin
    ConsoleWindowWriteLn(WindowHandle,'Waiting for drive C:\');
-   
+
    {Wait for C:\ drive}
    while not DirectoryExists('C:\') do
     begin

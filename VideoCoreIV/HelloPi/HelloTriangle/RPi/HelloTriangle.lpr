@@ -29,12 +29,12 @@ uses
 var
  WindowHandle:TWindowHandle;
 
-{Link our C library to include the original example} 
+{Link our C library to include the original example}
 {$linklib hello_triangle}
- 
+
 {Import the main function of the example so we can call it from Ultibo}
 procedure hello_triangle; cdecl; external 'hello_triangle' name 'hello_triangle';
- 
+
 begin
  {Create a console window as usual}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
@@ -50,12 +50,12 @@ begin
   end;
  ConsoleWindowWriteLn(WindowHandle,'C:\ drive is ready');
  ConsoleWindowWriteLn(WindowHandle,'');
- 
+
  {Call the main function of the example, it will return here when completed (if ever)}
  hello_triangle;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello Triangle');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

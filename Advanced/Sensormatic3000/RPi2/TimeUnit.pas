@@ -19,10 +19,10 @@ uses
   Console,
   GraphicsConsole;
 
-  
+
 procedure StartTimeThread;
-  
-  
+
+
 implementation
 
 
@@ -41,61 +41,61 @@ var
  DateTime:TDateTime;
 begin
  Result:=0;
- 
+
  {Set the name so we can find it in the threads list}
  ThreadSetName(ThreadGetCurrent,'Time Thread');
- 
+
  {Setup the font and get width and height}
  Font:=FontFindByName('Sun-12x22');
  Width:=GraphicsWindowGetWidth(MainWindow);
  Height:=GraphicsWindowGetHeight(MainWindow);
- 
+
  {Loop checking and setting the time}
  while True do
   begin
    {Get the uptime}
    DateTime:=SystemFileTimeToDateTime(Uptime);
-   
+
    {Check the Width}
    if Width < 700 then
     begin
      {And the time to be displayed}
      Text:='Time: '  + DateTimeToStr(Now);
-     
+
      {Calculate our position in the main window}
      Left:=Width - ((Length(Text) + 1) * FontGetWidth(Font));
      Top:=Height - ((2 * FontGetHeight(Font)) + 1);
-     
+
      {Output the time}
      GraphicsWindowDrawTextEx(MainWindow,Font,Text,Left,Top,COLOR_SILVER,ADUG_GREEN);
-     
+
      {Get the uptime to display}
      Text:='Uptime: ' + IntToStr(Trunc(DateTime)) + ' days ' + TimeToStr(DateTime);
-     
+
      {Calculate our position}
      Left:=Width - ((Length(Text) + 1) * FontGetWidth(Font));
      Top:=Height - (FontGetHeight(Font) + 1);
-     
+
      {Output the uptime}
      GraphicsWindowDrawTextEx(MainWindow,Font,Text,Left,Top,COLOR_SILVER,ADUG_GREEN);
     end
    else
-    begin   
+    begin
      {And the text to be displayed}
      Text:='Time: '  + DateTimeToStr(Now) + ' / Uptime: ' + IntToStr(Trunc(DateTime)) + ' days ' + TimeToStr(DateTime);
-     
+
      {Calculate our position in the main window}
      Left:=Width - ((Length(Text) + 1) * FontGetWidth(Font));
      Top:=Height - (FontGetHeight(Font) + 1);
-     
+
      {And output the text}
      GraphicsWindowDrawTextEx(MainWindow,Font,Text,Left,Top,COLOR_SILVER,ADUG_GREEN);
-    end; 
-   
+    end;
+
    {Go back to sleep}
    Sleep(1000);
   end;
-  
+
 end;
 
 
@@ -106,7 +106,7 @@ var
 begin
  {This one uses BeginThread instead of the TThread class}
  BeginThread(ExecuteTimeThread,nil,ThreadHandle,THREAD_STACK_DEFAULT_SIZE);
- 
+
 end;
 
 

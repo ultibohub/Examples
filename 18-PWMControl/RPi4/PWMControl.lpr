@@ -57,24 +57,24 @@ uses
   SysUtils,
   PWM;   {Include the PWM unit to allow access to the functions}
 
-{Declare a window handle, a counter and a couple of PWM devices}  
+{Declare a window handle, a counter and a couple of PWM devices}
 var
  Handle:THandle;
  Count:Integer;
  PWM0Device:PPWMDevice;
  PWM1Device:PPWMDevice;
- 
+
 begin
  {Create a console window and display a welcome message}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
  ConsoleWindowWriteLn(Handle,'Welcome to Example 18 PWM Control');
 
  {First locate the PWM devices
- 
+
   The Raspberry Pi 4 has four PWM channels which will normally end up with the names
   PWM0, PWM1, PWM2 and PWM3 when the driver is included in an application. For PWM
   control using the 40 pin header we want the devices named PWM0 and PWM1.
-  
+
   You could also use PWMDeviceFindByDescription() here and use the contant defined
   in the BCM2711 unit for BCM2711_PWM0_DESCRIPTION by appending the channel number
   to the description, for example BCM2711_PWM0_DESCRIPTION + '_0' for the first
@@ -86,20 +86,20 @@ begin
   begin
    {This example uses the default GPIO pin values which are GPIO_PIN_18 for PWM0
     and GPIO_PIN_19 for PWM1. If you need to use one of the alternate GPIO pins
-    then you can call PWMDeviceSetGPIO() with the required pin number. 
-    
+    then you can call PWMDeviceSetGPIO() with the required pin number.
+
     You can also use PWMDeviceGetGPIO() to find out the currently configured pin}
-   
-   {On the Raspberry Pi the PWM setup requires 3 values. 
-   
-    The first is the Mode which can be PWM_MODE_MARKSPACE, PWM_MODE_BALANCED or 
+
+   {On the Raspberry Pi the PWM setup requires 3 values.
+
+    The first is the Mode which can be PWM_MODE_MARKSPACE, PWM_MODE_BALANCED or
     PWM_MODE_SERIALIZED. These are described in detail in the BCM2835 ARM Peripherals
     documentation which can be found via the resources page on the Ultibo wiki.
-    
+
     The second value is the Frequency which controls the frequency of the clock
     used by the PWM device. On the Raspberry Pi both PWM devices share a common
     clock so changing the frequency on one device also changes it on the other.
-    
+
     The final setup value is the Range, the exact meaning of the range value varies
     depending on the mode selected but in general it represents the time period of
     one full cycle of the waveform output by the device.
@@ -107,30 +107,30 @@ begin
     The range and the data define what is actually output onto the GPIO pin, as an
     alternative to setting them individually you can call PWMDeviceConfigure() which
     allows you to specify both a Range and a Duty cycle in nanoseconds.
-    
+
     Try experimenting with the range and data values to see how they affect the LEDs}
-    
+
    {Setup PWM device 0}
-   {Set the range to 1000} 
+   {Set the range to 1000}
    PWMDeviceSetRange(PWM0Device,1000);
    {And the mode to PWM_MODE_MARKSPACE}
    PWMDeviceSetMode(PWM0Device,PWM_MODE_MARKSPACE);
    {Finally set the frequency to 9.6MHz}
    PWMDeviceSetFrequency(PWM0Device,9600000);
-   
+
    {Setup PWM device 1}
    {Use exactly the same settings as PWM0}
    PWMDeviceSetRange(PWM1Device,1000);
    PWMDeviceSetMode(PWM1Device,PWM_MODE_MARKSPACE);
    PWMDeviceSetFrequency(PWM1Device,9600000);
- 
+
    {Start the PWM devices
-   
+
     This will start the clock and enable the devices, the final step to
     output something is to write some actual data which will specify how
     many pulses are output within the time period defined by the range.
-    
-    A data value of 0 will turn off the output whereas a data value equal 
+
+    A data value of 0 will turn off the output whereas a data value equal
     to the range will mean the output is always on (pulses are continuous).
     We can use this to make our LED go from fully off to fully on in gradual
     steps, the time it takes to make this transition is simply controlled by
@@ -141,30 +141,30 @@ begin
      while True do
       begin
        {Cycle the devices through the entire range from 0 to 1000.
-       
+
         The PWM0 device goes upwards (from off to full brightness)
         and the PWM1 device goes down (from full brightness to off)}
        for Count:=0 to 1000 do
         begin
          PWMDeviceWrite(PWM0Device,Count);
          PWMDeviceWrite(PWM1Device,1000 - Count);
-         
+
          Sleep(1);
         end;
-      
+
        {Reverse the directions from above so PWM0 starts at full and
         PWM1 starts at off, then repeat from the beginning}
        for Count:=0 to 1000 do
         begin
          PWMDeviceWrite(PWM0Device,1000 - Count);
          PWMDeviceWrite(PWM1Device,Count);
-         
+
          Sleep(1);
         end;
       end;
-   
+
      {Stop the PWM devices
-     
+
       This will disable the devices and stop the clock, remember that the
       clock is shared between both devices so the driver will only actually
       stop the clock when PWMDeviceStop() is called for both of them}
@@ -179,9 +179,9 @@ begin
  else
   begin
    ConsoleWindowWriteLn(Handle,'Error: Failed to locate PWM devices 0 and 1');
-  end;  
-  
+  end;
+
  {Halt the thread if we return}
  ThreadHalt(0);
 end.
- 
+

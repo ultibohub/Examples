@@ -41,9 +41,9 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse FTP Server Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -53,11 +53,11 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Create the FTP service (Listener) thread}
  TServiceThread.create;
- 
- {Halt the main thread} 
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

@@ -16,24 +16,24 @@ uses
   GlobalConfig,
   GlobalConst;
 
-  
+
 implementation
 
 
 initialization
  {Disable SysLog Logging}
  SYSLOG_REGISTER_LOGGING:=False;
- 
+
  {Enable Serial Logging}
  SERIAL_REGISTER_LOGGING:=True;
  SERIAL_LOGGING_DEFAULT:=True;
- 
+
  {Setup Default Colors}
  WINDOW_DEFAULT_FORECOLOR:=COLOR_WHITE;
  WINDOW_DEFAULT_BACKCOLOR:=COLOR_BLACK;
- 
+
  {Disable Console Shell}
  CONSOLE_SHELL_ENABLED:=False;
- 
+
 end.
 

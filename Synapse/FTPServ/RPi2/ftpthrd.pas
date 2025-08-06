@@ -12,7 +12,7 @@ uses
 {$ELSE}
   {$IFDEF ULTIBO}
     Platform, Threads, Ultibo,
-  {$ELSE}  
+  {$ELSE}
     Windows,
   {$ENDIF}
 {$ENDIF}
@@ -110,7 +110,7 @@ begin
   value := replacestring(value, '/', '\');
   {$IFDEF ULTIBO}
   result := 'C:\data' + value;
-  {$ELSE}  
+  {$ELSE}
   result := '.\data' + value;
   {$ENDIF}
 end;
@@ -179,7 +179,7 @@ var
   st: TFileStream;
 begin
   ThreadSetName(GetCurrentThreadID,'FTP Server Thread');
-  
+
   sock := TTCPBlockSocket.Create;
   dsock := TTCPBlockSocket.Create;
   try

@@ -65,9 +65,9 @@ begin
  try
   {Create our console window}
   Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-   
+
   ConsoleWindowWriteLn(Handle,'Starting Synapse Serial Echo Example');
-   
+
   {Wait a couple of seconds for C:\ drive to be ready}
   ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
   while not DirectoryExists('C:\') do
@@ -77,7 +77,7 @@ begin
    end;
   ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
   ConsoleWindowWriteLn(Handle,'');
-  
+
   {Create blocking serial object}
   BlockSerial:=TBlockSerial.Create;
   BlockSerial.RaiseExcept:=True;
@@ -87,13 +87,13 @@ begin
    if BlockSerial.LastError = 0 then
     begin
      ConsoleWindowWriteLn(Handle,'Connected');
-     
+
      {Configure}
      BlockSerial.Config(9600,8,'N',0,False,False);
      if BlockSerial.LastError = 0 then
       begin
        ConsoleWindowWriteLn(Handle,'Configured');
-       
+
        {Loop endlessly waiting for data}
        while True do
         begin
@@ -101,25 +101,25 @@ begin
          //Characters:=BlockSerial.RecvString(-1);                               //The RecvString method only uses CR LF
          Characters:=BlockSerial.RecvTerminated(-1,Chr(13)); //Chr(13) + Chr(10) //Change these values if your terminal program uses something different
          ConsoleWindowWriteLn(Handle,'Received string: ' + Characters);
-          
+
          if Uppercase(Characters) = 'QUIT' then
           begin
            {If received then say goodbye and exit our loop}
            Characters:='Goodbye!' + Chr(13) + Chr(10);
            BlockSerial.SendString(Characters);
-   
+
            {Wait for the data to be sent}
            Sleep(1000);
-   
+
            Break;
           end;
-          
+
          {Add a carriage return and line feed}
          Characters:=Characters + Chr(13) + Chr(10);
- 
+
          {And echo them back to the serial device}
          BlockSerial.SendString(Characters);
-        end; 
+        end;
       end
      else
       begin
@@ -133,14 +133,14 @@ begin
   finally
    BlockSerial.free;
   end;
-  
-  {Halt the main thread} 
+
+  {Halt the main thread}
   ThreadHalt(0);
  except
   on E: Exception do
    begin
     ConsoleWindowWriteLn(Handle,'An exception happened at address ' + IntToHex(PtrUInt(ExceptAddr),8) + ' the message was ' + E.Message);
    end;
- end; 
+ end;
 end.
- 
+

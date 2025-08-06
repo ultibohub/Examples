@@ -41,13 +41,13 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse Echo Daemon Example');
- 
+
  {Create the ECHO Daemon (Listener) thread}
  TTCPEchoDaemon.create;
- 
- {Halt the main thread} 
+
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

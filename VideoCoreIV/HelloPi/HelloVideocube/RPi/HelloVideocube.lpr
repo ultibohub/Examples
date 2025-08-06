@@ -34,12 +34,12 @@ uses
 var
  WindowHandle:TWindowHandle;
 
-{Link our C library to include the original example} 
+{Link our C library to include the original example}
 {$linklib hello_videocube}
- 
+
 {Import the main function of the example so we can call it from Ultibo}
 procedure hello_videocube; cdecl; external 'hello_videocube' name 'hello_videocube';
- 
+
 begin
  {Create a console window as usual}
  WindowHandle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
@@ -55,12 +55,12 @@ begin
   end;
  ConsoleWindowWriteLn(WindowHandle,'C:\ drive is ready');
  ConsoleWindowWriteLn(WindowHandle,'');
- 
+
  {Call the main function of the example, it will return here when completed (if ever)}
  hello_videocube;
- 
+
  ConsoleWindowWriteLn(WindowHandle,'Completed Hello Videocube');
- 
+
  {Halt the main thread here}
  ThreadHalt(0);
 end.

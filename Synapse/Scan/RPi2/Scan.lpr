@@ -42,7 +42,7 @@ var
  Handle:THandle;
  ScanStart:String = '192.168.0.1'; {Change these addresses to suit your network}
  ScanEnd:String = '192.168.0.254';
- 
+
  i,j:Cardinal;
  PingStart:Cardinal;
  PingEnd:Cardinal;
@@ -54,9 +54,9 @@ var
 begin
  {Create our console window}
  Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-  
+
  ConsoleWindowWriteLn(Handle,'Starting Synapse Ping Scan Example');
-  
+
  {Wait a couple of seconds for C:\ drive to be ready}
  ConsoleWindowWriteLn(Handle,'Waiting for drive C:\');
  while not DirectoryExists('C:\') do
@@ -66,27 +66,27 @@ begin
   end;
  ConsoleWindowWriteLn(Handle,'C:\ drive is ready');
  ConsoleWindowWriteLn(Handle,'');
- 
+
  {Wait a few seconds for the network to be ready}
  Sleep(3000);
- 
+
  {Check start and end}
  if IsIPAddress(ScanStart) and IsIPAddress(ScanEnd) then
   begin
    PingStart:=IPToCardinal(StrToIP(ScanStart));
    PingEnd:=IPToCardinal(StrToIP(ScanEnd));
-   
+
    {Display addresses}
    ConsoleWindowWriteLn(Handle,'Start address  ' + ScanStart);
    ConsoleWindowWriteLn(Handle,'End address  ' + ScanEnd);
    ConsoleWindowWriteLn(Handle,'');
-   
+
    {Get count}
    PingCount:=(PingEnd - PingStart) + 1;
 
    {Display count}
    ConsoleWindowWrite(Handle,'Pinging ' + IntToStr(PingCount) + ' addresses');
-   
+
    {Initialize arrays}
    SetLength(PingResults,PingCount);
    SetLength(PingThreads,PingCount);
@@ -143,9 +143,9 @@ begin
  else
   begin
    ConsoleWindowWriteLn(Handle,'Invalid start or end address for scan');
-  end;  
+  end;
 
- {Halt the main thread} 
+ {Halt the main thread}
  ThreadHalt(0);
 end.
- 
+

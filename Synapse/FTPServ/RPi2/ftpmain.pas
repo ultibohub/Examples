@@ -11,8 +11,8 @@ uses
   Libc,
 {$ELSE}
   {$IFDEF ULTIBO}
-    Platform, Threads, Ultibo, 
-  {$ELSE}  
+    Platform, Threads, Ultibo,
+  {$ELSE}
     Windows,
   {$ENDIF}
 {$ENDIF}
@@ -47,7 +47,7 @@ var
   sock: TTCPBlockSocket;
 begin
   ThreadSetName(GetCurrentThreadID,'FTP Listener Thread');
-  
+
   sock := TTCPBlockSocket.Create;
   try
     sock.bind('0.0.0.0','21');
